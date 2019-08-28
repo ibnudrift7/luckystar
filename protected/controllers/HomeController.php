@@ -236,6 +236,15 @@ class HomeController extends Controller
 		));
 	}
 
+	// public function actionProducHouseware()
+	// {
+	// 	$this->layout='//layouts/column2';
+	// 	$this->pageTitle = 'Product Houseware - '. $this->pageTitle;
+		
+	// 	$this->render('//home/product_houseware', array(	
+	// 	));
+	// }
+
 	public function actionPCart()
 	{
 		$this->layout='//layouts/column3';
@@ -515,6 +524,24 @@ class HomeController extends Controller
 		$this->layout='//layouts/column2';
 
 		$this->render('about', array(	
+		));
+	}
+
+	public function actionProducthw()
+	{
+		$this->pageTitle = 'About Us - '.$this->pageTitle;
+		$this->layout='//layouts/column2';
+
+		$this->render('product_houseware', array(	
+		));
+	}
+
+	public function actionProducthwDet()
+	{
+		$this->pageTitle = 'About Us - '.$this->pageTitle;
+		$this->layout='//layouts/column2';
+
+		$this->render('product_houseware_detail', array(	
 		));
 	}
 

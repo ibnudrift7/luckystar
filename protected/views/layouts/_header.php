@@ -1,48 +1,94 @@
-<header class="header">
-  <div class="d-none d-sm-none d-md-block d-lg-block">
-      <div class="prelative container pt-3 pb-2">
+<header class="header <?php if ($_SERVER['REQUEST_URI'] != '/luckystar/home/index'): ?>insidepage<?php endif ?>">
+<div class="d-none d-sm-none d-md-block d-lg-block">
+      <div class="prelative header-cont pt-3">
           <div class="row">
-              <div class="col-md-20">
+              <div class="col-md-18">
                   <a href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">
-                      <img src="<?php echo $this->assetBaseurl; ?>logo-header.png" alt="">
+                      <img src="<?php echo $this->assetBaseurl; ?>logo-foot.png" alt="">
 
                   </a>
               </div>
-              <div class="col-md-40 pt-2">
-                  <ul>
-                      <li><a href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">Home</a></li>
-                      <li><a href="<?php echo CHtml::normalizeUrl(array('/product/index')); ?>">Produk Bahan Bangunan Kami</a></li>
-                      <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about')); ?>">Profil</a></li>
-                      <li><a href="<?php echo CHtml::normalizeUrl(array('/home/merk')); ?>">Merk & Keagenan</a></li>
-                      <li><a href="<?php echo CHtml::normalizeUrl(array('/home/jadiagen')); ?>">Jadi Agen Kami</a></li>
-                      <li><a href="<?php echo CHtml::normalizeUrl(array('/home/hubungi')); ?>">Hubungi Kami</a></li>
-                      <li><a href="<?php echo CHtml::normalizeUrl(array('/blog/index')); ?>">Blog Kami</a></li>
+              <div class="col-md-28 pt-2">
+                  <ul class="menu-atas">
+                      <li><a href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">HOME</a></li>
+                      <li><a href="<?php echo CHtml::normalizeUrl(array('/home/produk')); ?>">TENTANG KAMI</a></li>
+                      <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about')); ?>">JADI MITRA KAMI</a></li>
+                      <li><a href="<?php echo CHtml::normalizeUrl(array('/home/merk')); ?>">BLOG</a></li>
+                      <li><a href="<?php echo CHtml::normalizeUrl(array('/home/hubungi')); ?>">HUBUNGI KAMI</a></li>
                   </ul>
+              </div>
+              <div class="col-md-14">
+                <div class="menu-icon">
+                
+                  <div class="sosmed">
+                    <img src="<?php echo $this->assetBaseurl; ?>wa-atas.png" alt="">
+                  </div>
+                  <div class="sosmed">
+                    <img src="<?php echo $this->assetBaseurl; ?>fb-atas.png" alt="">
+                  </div>
+                  <div class="sosmed">
+                    <img src="<?php echo $this->assetBaseurl; ?>ig-atas.png" alt="">  
+                  </div>
+                  <div class="hr-ver"></div>
+                  <div class="sosmed">
+                    <img src="<?php echo $this->assetBaseurl; ?>basket-atas.png" alt="">  
+                  </div>
+                  <div class="sosmed kanan">
+                    <img src="<?php echo $this->assetBaseurl; ?>list.png" alt="">  
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+
               </div>
           </div>
       </div>
+      <?php
+        $mod_header = [
+            1 => [
+                'isi' => 'HOUSEWARE'
+            ],
+            [
+              'isi' => 'TABLE WARE'
+            ],
+            [
+              'isi' => 'KITCHEN WARE'
+            ],
+            [
+              'isi' => 'OFFICE'
+            ],
+            [
+              'isi' => 'FURNITURE'
+            ],
+            [
+              'isi' => 'CONTAINER'
+            ],
+            [
+              'isi' => 'OTHER'
+            ]
+        ];
+      ?>
       <div class="header-bottom">
-          <div class="prelative container">
+          <div class="prelative header-cont">
               <div class="row">
-                  <div class="col-md-20">
+                  <div class="col-md-40">
                       <div class="grant py-2">
-                          <p>GRANIT TILE & ANEKA BAHAN BANGUNAN</p>
+                          <ul class="bawah-head">
+                          <?php foreach($mod_header as $key => $value): ?>
+                            <li>
+                              <p><?php echo $value['isi'] ?></p>
+                            </li>
+                          <?php endforeach ?>
+                          </ul>
                       </div>
                   </div>
-                  <div class="col-md-40 text-right d-block">
+                  <div class="col-md-20 text-right d-block">
                       <div class="whatsapp py-2">
                           <a href="#">
-                              <p><img src="<?php echo $this->assetBaseurl; ?>logo-wa.png" alt=""><span>
+                              <!-- <p><img src="<?php echo $this->assetBaseurl; ?>logo-wa.png" alt=""><span>
                               WA / HOTLINE  082154073738 
-                              </span></p>
+                              </span></p> -->
                           </a>
-                      </div>
-                      <div class="line-separator">
-                          
-                      </div>
-                      <div class="belanja py-2">
-                          <img src="<?php echo $this->assetBaseurl; ?>belanja-logo.png" alt="">
-                          <p><?php echo Cart::getTotalCartItem(); ?></p>
                       </div>
                   </div>
               </div>
@@ -61,7 +107,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item"><a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/product/index')); ?>">Produk Bahan Bangunan Kami</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/produk')); ?>">Produk Bahan Bangunan Kami</a></li>
             <li class="nav-item"><a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/about')); ?>">Profil</a></li>
             <li class="nav-item"><a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/merk')); ?>">Merk & Keagenan</a></li>
             <li class="nav-item"><a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/jadiagen')); ?>">Jadi Agen Kami</a></li>
@@ -89,7 +135,7 @@
           <div class="menu-taffix">
             <ul class="list-inline d-inline">
               <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">Home</a></li>
-              <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/product/index')); ?>">Produk Bahan Bangunan</a></li>
+              <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/produk')); ?>">Produk Bahan Bangunan</a></li>
               <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/about')); ?>">Profil</a></li>
               <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/merk')); ?>">Merk & Keagenan</a></li>
               <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/jadiagen')); ?>">Jadi Agen</a></li>

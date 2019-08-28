@@ -1,99 +1,268 @@
-<!-- <section class="cover-home">
-	<div class="prelative container">
-		<div class="container2 mx-auto">
-			<div class="row mx-auto">
-				<div class="col-md-60 mx-auto pt-3">
-					<h2 class="text-center">Galery Granit Tile Terbesar dan Pusat Aneka Material Bahan Bangunan, <br>
-					Menyediakan Koleksi Terlengkap di Banjarmasin, Kalsel.</h2>
-				</div>
-				<div class="col-md-60 mx-auto">
-                    <button class="profil mx-auto text-center d-block ">Lihat Produk Kami</button>
-                </div>
-			</div>
-		</div>
-	</div>
-</section> -->
- 
+<?php
+$mod_kategori = [
+    1 => [
+        'gambar' => 'furniture.jpg',
+        'judul' => 'Furniture',
+    ],
+    [
+        'gambar' => 'houseware.jpg',
+        'judul' => 'Houseware',
+    ],
+    [
+        'gambar' => 'tableware.jpg',
+        'judul' => 'Tableware',
+    ],
+    [
+        'gambar' => 'container.jpg',
+        'judul' => 'Container',
+    ]
+];
+?>
+
+
+
 <section class="home-sec-1">
 	<div class="prelative container">
-		<div class="container2 mx-auto py-4">
-			<div class="row">
-				<div class="content py-4">
-					<?php echo $this->setting['home_section2_content']; ?>
-				</div>
+		<div class="row">
+			<div class="title-top">
+				<p>Kategori Favorit Produk Plastik Lucky Star</p>
 			</div>
+		</div>
+		<div class="row">
+			<?php foreach($mod_kategori as $key => $value): ?>
+				<div class="col-md-15">
+					<div class="image"><img class="w-100" src="<?php echo $this->assetBaseurl; ?><?php echo $value['gambar'] ?>" alt=""></div>
+					<div class="title">
+						<p><?php echo $value['judul'] ?></p>
+					</div>
+					<div class="lihat_kat">
+						<a href="#">lihat kategori</a>
+					</div>
+				</div>
+			<?php endforeach ?>
 		</div>
 	</div>
 </section>
+
+<?php
+$mod_fav = [
+    1 => [
+        'gambar' => 'favorite1.jpg',
+        'judul' => 'Baki Anyam Besar',
+    ],
+    [
+        'gambar' => 'favorite2.jpg',
+        'judul' => 'Baki Anyam Kecil',
+    ],
+    [
+        'gambar' => 'favorite3.jpg',
+        'judul' => 'Keranjang Anyam Bundar',
+    ],
+    [
+        'gambar' => 'favorite4.jpg',
+        'judul' => 'Keranjang Anyam Besar',
+    ],
+    [
+        'gambar' => 'favorite5.jpg',
+        'judul' => 'Pel pelan plastik',
+    ],
+    [
+        'gambar' => 'favorite6.jpg',
+        'judul' => 'Pemeras Jeruk',
+    ],
+    [
+        'gambar' => 'favorite7.jpg',
+        'judul' => 'Baki Anyam Besar',
+    ],
+    [
+        'gambar' => 'favorite8.jpg',
+        'judul' => 'Baki Anyam Kecil',
+    ],
+    [
+        'gambar' => 'favorite9.jpg',
+        'judul' => 'Keranjang Anyam Bundar',
+    ],
+    [
+        'gambar' => 'favorite10.jpg',
+        'judul' => 'Keranjang Anyam Besar',
+    ],
+    [
+        'gambar' => 'favorite11.jpg',
+        'judul' => 'Pel pelan plastik',
+    ],
+    [
+        'gambar' => 'favorite12.jpg',
+        'judul' => 'Pemeras Jeruk',
+    ],
+    [
+        'gambar' => 'favorite13.jpg',
+        'judul' => 'Baki Anyam Besar',
+    ],
+    [
+        'gambar' => 'favorite14.jpg',
+        'judul' => 'Baki Anyam Kecil',
+    ],
+    [
+        'gambar' => 'favorite15.jpg',
+        'judul' => 'Keranjang Anyam Bundar',
+    ],
+    [
+        'gambar' => 'favorite16.jpg',
+        'judul' => 'Keranjang Anyam Besar',
+    ],
+    [
+        'gambar' => 'favorite17.jpg',
+        'judul' => 'Pel pelan plastik',
+    ],
+    [
+        'gambar' => 'favorite18.jpg',
+        'judul' => 'Pemeras Jeruk',
+    ]
+];
+?>
 
 <section class="home-sec-2">
-	<div class="prelative container pt-5">
-		<div class="container2 mx-auto">
-			<div class="row pt-5 pb-5 mb-5">
-				<h3 class="pb-4"><?php echo $this->setting['home_section3_title'] ?></h3>
-				<?php
-
-				$criteria = new CDbCriteria;
-				$criteria->with = array('description');
-				$criteria->addCondition('t.type = :type');
-				$criteria->params[':type'] = 'category';
-				$criteria->addCondition('description.language_id = :language_id');
-				$criteria->params[':language_id'] = $this->languageID;
-				$criteria->order = 'sort ASC';
-
-				$ParentsCategory = PrdCategory::model()->findAll($criteria);
-				?>
-				<?php foreach ($ParentsCategory as $key => $value): ?>
-				<div class="col-md-20 pt-4">
-					<div class="box-product">
-						<a href="<?php echo CHtml::normalizeUrl(array('/product/index', 'category'=> $value->id)); ?>">
-							<img class="w-100 d-block img img-fluid" src="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(352,173, '/images/category/'. $value->image, array('method' => 'adaptiveResize', 'quality' => '90')) ?>" alt="<?php echo $value->description->name; ?>">
-						</a>
-						<div class="content py-4 pl-4 pr-4">
-							<h1><?php echo ucwords(strtolower( $value->description->name )); ?></h1>
-							<p class="isi"><?php echo $value->description->desc; ?></p>
-							<div class="lihat-produk pt-3">
-								<a href="<?php echo CHtml::normalizeUrl(array('/product/index', 'category'=> $value->id)); ?>">
-									<p>Lihat Produk<span><img class="arrow" src="<?php echo $this->assetBaseurl; ?>arrow.png" alt=""></span></p>
-								</a>
-							</div>
-						</div>
-					</div>					
-				</div>	
-				<?php endforeach ?>
-
+	<div class="prelative container">
+		<div class="row">
+			<div class="col-md-60">
+				<div class="title">
+					<p>Produk Plastik Favorit Lucky Star</p>
+				</div>
 			</div>
+		</div>
+		<div class="row">
+			<?php foreach($mod_fav as $key => $value): ?>
+				<div class="col-md-10">
+					<div class="box-content">
+						<div class="image"><img class="w-100" src="<?php echo $this->assetBaseurl; ?><?php echo $value['gambar'] ?>" alt=""></div>
+						<div class="judul">
+							<p><?php echo $value['judul'] ?></p>
+						</div>
+						<div class="lihat"><a href="#">lihat produk</a></div>
+					</div>
+				</div>
+			<?php endforeach ?>
+		</div>
+		<div class="lihat-semua">
+			<a href="#">lihat semua produk</a>
 		</div>
 	</div>
 </section>
 
-<section class="home-sec-3 pb-5">
+<section class="home-sec-3">
 	<div class="prelative container">
-		<div class="container2 mx-auto pt-5">
-			<div class="row pt-3">
-				<div class="content">
-					<h3><?php echo $this->setting['home_section4_title'] ?></h3>
-					<?php 
-					$criteria = new CDbCriteria;
-					$criteria->with = array('description');
-					$criteria->addCondition('active = "1"');
-					$criteria->addCondition('description.language_id = :language_id');
-					$criteria->params[':language_id'] = $this->languageID;
-					// $criteria->order = 'date_input DESC';
-					$modelArsim = Brand::model()->findAll($criteria);
-					?>
-					<div class="py-3 mb-1"></div>
-					<div class="row">
-						<?php foreach ($modelArsim as $key => $value): ?>
-						<div class="col-md-15 col-30">
-							<img src="<?php echo Yii::app()->baseUrl; ?>/images/brand/<?php echo $value->image ?>" alt="">
-						</div>
-						<?php endforeach ?>
-					</div>
-
+		<div class="row">
+			<div class="col-md-60">
+				<div class="title">
+					<p>Dapatkan Koleksi Lengkap Produk Plastik Lucky Star</p>
+				</div>
+				<div class="download">
+					<a href="#"><i class="fa fa-download"></i>Download Katalog</a>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
 
+<?php
+$mod_blog = [
+    1 => [
+        'gambar' => 'blog1.jpg',
+        'judul' => 'Cara mengurangi limbah plastik adalah dengan tidak membuangnya',
+        'kat' => 'artikel'
+    ],
+    [
+        'gambar' => 'blog2.jpg',
+        'judul' => 'Lucky Star berpartisi meramaikan Java Big Bang 2019',
+        'kat' => 'berita'
+    ],
+    [
+        'gambar' => 'blog3.jpg',
+        'judul' => 'Sale & Pameran Plastic Lucky Star di PRJ Expo Jakarta 2019',
+        'kat' => 'berita'
+    ],
+    [
+        'gambar' => 'blog4.jpg',
+        'judul' => 'Apa saja istilah di dunia plastik, dan mengapa penting mengetahuinya?',
+        'kat' => 'artikel'
+    ]
+];
+?>
+
+<section class="home-sec-4">
+	<div class="prelative container">
+		<div class="row">
+			<div class="col-md-60">
+				<div class="title">
+					<p>Blog Terbaru</p>
+				</div>
+			</div>
+			<?php foreach($mod_blog as $key => $value): ?>
+			<div class="col-md-15">
+				<div class="box-content">
+					<div class="image"><img class="w-100" src="<?php echo $this->assetBaseurl; ?><?php echo $value['gambar'] ?>" alt=""></div>
+					<div class="kategori">
+						<p><?php echo $value['kat'] ?></p>
+					</div>
+					<div class="judul">
+						<a><?php echo $value['judul'] ?></a>
+					</div>
+				</div>
+			</div>
+			<?php endforeach ?>
+		</div>	
+		<div class="lihat-semua">
+			<a href="#">lihat index blog</a>
+		</div>
+	</div>
+</section>
+
+<section class="home-sec-5">
+	<div class="prelative container">
+		<div class="row">
+			<div class="col-md-60">
+				<div class="title">
+					<p>mari berbicara dengan kami</p>
+				</div>
+			</div>
+		</div>
+		<form class="fielddd">
+			<div class="form-row">
+				<div class="form-group col-md-30">
+					<label for="inputEmail4">NAMA ANDA</label>
+					<input type="text" class="form-control" id="" placeholder="">
+				</div>
+				<div class="form-group col-md-30">
+					<label for="inputEmail4">EMAIL</label>
+					<input type="text" class="form-control" id="" placeholder="">
+				</div>
+				<div class="form-group col-md-30">
+					<label for="inputEmail4">TELEPON</label>
+					<input type="nama" class="form-control" id="inputEmail4" placeholder="">
+				</div>
+				<div class="form-group col-md-30">
+					<label for="inputEmail4">NAMA PERUSAHAAN</label>
+					<input type="email" class="form-control" id="inputEmail4" placeholder="">
+				</div>
+			</div>
+		</form>
+		<div class="tertarik">
+			<p>KETERTARIKAN</p>
+		</div>
+		<form class="radioo">
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+				<label class="form-check-label" for="inlineRadio1">membeli produk</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+				<label class="form-check-label" for="inlineRadio2">menjadi mitra / agen</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+				<label class="form-check-label" for="inlineRadio1">lainnya</label>
+			</div>
+		</form>
+		<button class="form-control">submit</button>
+	</div>
+</section>

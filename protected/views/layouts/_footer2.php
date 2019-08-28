@@ -1,3 +1,18 @@
+<section class="home-sec-3 footer2">
+	<div class="prelative container">
+		<div class="row">
+			<div class="col-md-60">
+				<div class="title">
+					<p>Dapatkan Koleksi Lengkap Produk Plastik Lucky Star</p>
+				</div>
+				<div class="download">
+					<a href="#"><i></i>Download Katalog</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
 <section class="footer">
     <div class="prelative container">
         <div class="image-top"><img src="<?php echo $this->assetBaseurl; ?>logo-foot.png" alt=""></div>
@@ -25,6 +40,7 @@
         </div>
     </div>
 </section>
+
 
 <section class="footer-sec-2">
     <div class="prelative container">
