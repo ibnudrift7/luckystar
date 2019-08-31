@@ -3,23 +3,23 @@
 class BlogController extends Controller
 {
 
-	// public function actionD_index()
-	// {
-	// 	$this->pageTitle = 'Berita & Artikel - '.$this->pageTitle;
-	// 	$this->layout='//layouts/column1';
+	public function actionD_index()
+	{
+		$this->pageTitle = 'Berita & Artikel - '.$this->pageTitle;
+		$this->layout='//layouts/column2';
 
-	// 	$this->render('//blog/d_index', array(	
-	// 	));
-	// }
+		$this->render('//blog/d_index', array(	
+		));
+	}
 
-	// public function actionD_detail()
-	// {
-	// 	$this->pageTitle = 'Title News' . ' - News & Articles - '.$this->pageTitle;
-	// 	$this->layout='//layouts/column1';
+	public function actionD_detail()
+	{
+		$this->pageTitle = 'Title News' . ' - News & Articles - '.$this->pageTitle;
+		$this->layout='//layouts/column2';
 
-	// 	$this->render('//blog/d_detail', array(	
-	// 	));
-	// }
+		$this->render('//blog/d_detail', array(	
+		));
+	}
 
 	public function actionIndex()
 	{
