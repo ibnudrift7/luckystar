@@ -1,115 +1,91 @@
-<?php
-$session = new CHttpSession;
-$session->open();
-$login_member = $session['login_member'];
-?>
-<!-- Bawah header -->
-<section class="default-sc inside-page product-details"> 
-  <section class="top-product-detail">
-    <div class="container defaults">
-      <div class="tops">
-        <div class="row">
-          <div class="col-md-40">
-            <div class="shn-back-products">
-              <a href="javascript:void(-1);"><i class="fa fa-long-arrow-left"></i> &nbsp;BACK</a> 
-              <span class="new-back-product"><div class="separators_linetop"></div> <span class="new-back-product">HOME / CONTACT US
-              </span>
-              </span>
-            </div>
-          </div>
-          <div class="col-md-20">
-            <div class="box-search">
-              <form class="form-inline">
-              <label for="inlineFormInputNN2">SEARCH</label>
-              <div class="blob-input">
-                <form method="GET" action="<?php echo CHtml::normalizeUrl(array('/product/index')); ?>">
-                  <input type="text" class="form-control mb-2" id="inlineFormInputNN2" placeholder="" name="q">
-                  <button type="submit" class="btn mb-2"><i class="fa fa-search"></i></button>
-                </form>
-              </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="clear height-50"></div>
-      <div class="clear height-20"></div>
-      <div class="row">
-        <div class="col-md-60">
-          <div class="contactus-header-top mx-auto d-block text-center">
-            <div class="seen-header-top"><?php echo $this->setting['contact_hero_title'] ?></div>
-            <div class="clear height-30"></div>
-            <div class="contactus-header-mid">
-              <?php echo $this->setting['contact_hero_subtitle'] ?>
-            </div>
-            <div class="clear height-30"></div>
-            <div class="clear height-25"></div>
-            <div class="contactus-header-hotline">
-              OUR HOTLINE
-            </div>
-            <div class="clear height-40"></div>
-            <div class="contactus-header-nomor">
-              <i class="fa fa-whatsapp" aria-hidden="true"></i><span class="after-logo-wa">Phone / Whatsapp: <?php echo $this->setting['contact_phone'] ?></span><div class="d-block d-sm-none clear clearfix"></div><span class="after-number-wa"><i class="fa fa-envelope" aria-hidden="true"></i><span class="after-logo-wa">Email: <?php echo $this->setting['email'] ?></span></span>
-            </div>
-            <div class="clear height-30"></div>
-            <div class="clear height-25"></div>
-            <div class="contactus-header-hotline">
-              FACTORY & HEAD OFFICE
-            </div>
-            <div class="clear height-25"></div>
-            <div class="contactus-header-nomor">
-              <?php echo $this->setting['contact_content'] ?>
-            </div>
-            <div class="clear height-50"></div>
-            <div class="clear height-50"></div>
-            <div class="contactus-header-inquiries">
-              For any other inquiries, you can drop us a message and we’ll respond to you shortly.
-            </div>
-            <div class="clear height-20"></div>
-            <div class="clear height-20"></div>
-          </div>
-        </div>
-      </div>
-      <div class="form-contact">
-        <div class="row">
-          <div class="col-md-60">
-            <div class="title-form">
-              <div class="clear height-50"></div>
-              <div class="clear height-40"></div>
-              ONLINE INQUIRY FORM
-            </div>
-            <div class="clear height-50"></div>
-            <div class="title-form-label">
-              <form>
-                <div class="form-row">
-                  <div class="form-group col-md-20">
-                    <label for="inputEmail4" class="label-form-contact">NAME</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="">
-                  </div>
-                  <div class="form-group col-md-20">
-                    <label for="inputEmail4" class="label-form-contact">EMAIL</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="">
-                  </div>
-                  <div class="form-group col-md-20">
-                    <label for="inputEmail4" class="label-form-contact">PHONE</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="exampleTextarea" class="label-form-contact">MESSAGE</label>
-                  <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary submitform">SUBMIT</button>
-              </form>
-            </div>
-            <div class="clear height-50"></div>
-            <div class="clear height-50"></div>
-          </div>
-        </div>
-      </div>
-      <div class="clear height-50"></div>
-      <div class="clear height-10"></div>
+<?php 
+$cover_page = '';
 
-      <?php echo $this->renderPartial('//layouts/_tops_footer_partner', array()); ?>
-  </section>
+if (isset($this->setting['about_hero_image'])) {
+  $cover_page = Yii::app()->baseUrl.ImageHelper::thumb(1920,562, '/images/static/'. $this->setting['about_hero_image'] , array('method' => 'adaptiveResize', 'quality' => '90'));
+}
+?>
+
+<section class="cover_insidepage prelative">
+  <div class="feature-image">
+    <img src="https://placehold.it/1920x475" alt="" class="img img-fluid">
+  </div>
+  <div class="sub-content-title text-center">
+    <h3>Hubungi Kami</h3>
+  </div>
+</section>
+
+
+<section class="contact-1 outer-content-page back-cream">
+  <div class="prelatife container">
+      <div class="py-5"></div>
+      <div class="row small-content text-center">
+        <div class="col-md-8"></div>
+        <div class="col-md-44">
+          <p>Staff layanan pelanggan kami akan siap selalu untuk melayani kebutuhan anda.<br>
+          Kami terbuka untuk segala kesempatan untuk bekerjasama dalam bentuk keagenan atau distribusi, dan memperluas jaringan pemasaran Lucky Star Plastic di Indonesia maupun di mancanegara.</p>
+        </div>
+        <div class="col-md-8"></div>
+      </div>
+
+      <div class="py-4"></div>
+
+      <div class="sub-section2 pg-contact text-center">
+        <div class="row">
+          <div class="col-md-10"></div>
+          <div class="col-md-40">
+            <h5>Pabrik / Kantor Pusat</h5>
+            <p>PT. Gunung Agung Sentosa <br>
+            Jl. Kepatihan Industri No.78, Guntung, Kepatihan <br>
+            Kec. Menganti, Kabupaten Gresik, Jawa Timur 61174 <br>
+            Indonesia</p>
+            <div class="py-3"></div>
+            <div class="row">
+              <div class="col line-rights">
+                <i class="fa fa-phone"></i>
+                <div class="py-1"></div>
+                <p>
+                  <span>Telephone</span><br>
+                  +62 31 51161978
+                </p>
+              </div>
+              <div class="col line-rights">
+                <i class="fa fa-phone"></i>
+                <div class="py-1"></div>
+                <p>
+                  <span>Email</span><br>
+                  info@luckystar.co.id
+                </p>
+              </div>
+              <div class="col">
+                <i class="fa fa-phone"></i>
+                <div class="py-1"></div>
+                <p>
+                  <span>Whatsapp (klik untuk chat)</span><br>
+                  0817 1712 2131
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-10"></div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="py-5"></div>
+
+    <div class="clear clearfix"></div>
+  </div>
+</section>
+
+<section class="contact-2 outer-content-page back-white py-5">
+  <div class="prelatife container">      
+      <div class="text-center">
+        <h5>INKUIRI ONLINE - LUCKY STAR PLASTIC</h5>
+      </div>
+      <div class="py-2"></div>
+      <?php echo $this->renderPartial('//home/_form_contact', array('model'=> $model) ); ?>
+
+      <div class="clearfix"></div>
+  </div>
 </section>

@@ -5,142 +5,129 @@ if (isset($this->setting['about_hero_image'])) {
   $cover_page = Yii::app()->baseUrl.ImageHelper::thumb(1920,562, '/images/static/'. $this->setting['about_hero_image'] , array('method' => 'adaptiveResize', 'quality' => '90'));
 }
 ?>
-<section class="cover-insides" <?php if ($cover_page): ?>style="background-image: url(<?php echo $cover_page ?>);"<?php endif ?> >
-	<div class="prelative container">
-		<div class="container2 mx-auto">
-			<div class="row">
-        <div class="col-md-60">
-          <button class="profil mx-auto"><?php echo $this->setting['about_hero_title'] ?></button>
-        </div>
-        <div class="col-md-60">
-          <h2 class="mx-auto text-center pt-3"><?php echo $this->setting['about_hero_subtitle'] ?></h2>
-        </div>
-			</div>
-		</div>
-	</div>
-</section>
 
-<section class="about-sec-1">
-  <div class="prelative container pt-5">
-    <div class="container2  mx-auto pt-5">
-      <div class="row">
-        <div class="content pt-3 pb-3">
-          <?php echo $this->setting['about1_content'] ?>
-        </div>
-      </div>
-    </div>
+<section class="cover_insidepage prelative">
+  <div class="feature-image">
+    <img src="https://placehold.it/1920x475" alt="" class="img img-fluid">
+  </div>
+  <div class="sub-content-title text-center">
+    <h3>Tentang Kami</h3>
   </div>
 </section>
 
-<section class="about-sec-2">
-  <div class="prelative container pb-5 mb-5">
 
-    <div class="content-1 pt-5">
-      <div class="row">
-        <div class="col-md-30">
-          <img class="img img-fluid w-100" src="<?php echo Yii::app()->baseUrl.'/images/static/'. $this->setting['about2_pictures_t1']; ?>" alt="">
+<section class="about-1 outer-content-page back-cream">
+  <div class="prelatife container">
+      <div class="py-5"></div>
+      <div class="row small-content text-center">
+        <div class="col-md-8"></div>
+        <div class="col-md-44">
+          <p>OPS Houston provides high-end, luxury care for your cosmetic surgeries and procedures. You’ll be treated with highly personalized care in a luxury facility that makes your cosmetic procedure feel more like a trip to the spa. More importantly, you’ll be working with some of Houston’s leading cosmetic surgeons. As plastic surgeons, Dr. Andry and Dr. Wijay spent years training in the latest cosmetic plastic surgery techniques. Drs. Andry and Wijay have been focused on cosmetic surgery from the beginning of their careers in medicine.</p>
         </div>
-        <div class="col-md-30">
-          <div class="content-table p-3">
-            <div class="content">
-              <h2 class="pb-4"><?php echo $this->setting['about2_title_t1'] ?></h2>
-              <p><?php echo $this->setting['about2_content_t1'] ?></p>
+        <div class="col-md-8"></div>
+      </div>
+
+      <div class="py-4"></div>
+
+      <div class="sub-section2">
+        <div class="row">
+          <div class="col-md-30">
+            <div class="pos-absolu-featureds_image">
+              <img src="https://placehold.it/976x682" alt="" class="img img fluid">
+            </div>
+          </div>
+          <div class="col-md-30 back-blue">
+            <div class="inner_section py-5 p-4">
+              <h3>We start from scratch, with strong passion and dreams to reach.</h3>
+              <p>OPS Houston provides high-end, luxury care for your cosmetic surgeries and procedures. You’ll be treated with highly personalized care in a luxury facility that makes your cosmetic procedure feel more like a trip to the spa. More importantly, you’ll be working with some of Houston’s leading cosmetic surgeons. As plastic surgeons, Dr. Andry and Dr. Wijay spent years training in the latest cosmetic plastic surgery techniques. Drs. Andry and Wijay have been focused on cosmetic surgery from the beginning of their careers in medicine.</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="content-1 pt-5">
-      <div class="row">
-        <div class="col-md-30">
-          <div class="content-table p-3">
-            <div class="content">
-              <h2 class="pb-4"><?php echo $this->setting['about2_title_t2'] ?></h2>
-              <p><?php echo $this->setting['about2_content_t2'] ?></p>
-            </div>
-          </div>
+      <div class="py-5"></div>
+
+      <div class="row small-content c_commitment">
+        <div class="col-md-10"></div>
+        <div class="col-md-40">
+          <h3>Our Commitment</h3>
+          <p class="subtitle">
+            “To never stop learning and never stop creating, <br>
+            challenging ourselves to be the best at every key stage of operational.”
+          </p>
+          <p>OPS Houston provides high-end, luxury care for your cosmetic surgeries and procedures. You’ll be treated with highly personalized care in a luxury facility that makes your cosmetic procedure feel more like a trip to the spa. More importantly, you’ll be working with some of Houston’s leading cosmetic surgeons. As plastic surgeons, Dr. Andry and Dr. Wijay spent years training in the latest cosmetic plastic surgery techniques. Drs. Andry and Wijay have been focused on cosmetic surgery from the beginning of their careers in medicine.</p>
+
         </div>
-        <div class="col-md-30">
-          <img class="img img-fluid w-100" src="<?php echo Yii::app()->baseUrl.'/images/static/'. $this->setting['about2_pictures_t2']; ?>" alt="">
-        </div>
+        <div class="col-md-10"></div>
       </div>
-    </div>
 
-    <div class="content-1 pt-5">
-      <div class="row">
-        <div class="col-md-30">
-          <img class="img img-fluid w-100" src="<?php echo Yii::app()->baseUrl.'/images/static/'. $this->setting['about2_pictures_t3']; ?>" alt="">
-        </div>
-        <div class="col-md-30">
-          <div class="content-table p-3">
-            <div class="content">
-              <h2 class="pb-4"><?php echo $this->setting['about2_title_t3'] ?></h2>
-              <p><?php echo $this->setting['about2_content_t3'] ?></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-
+    <div class="clear clearfix"></div>
   </div>
 </section>
 
-<section class="about-sec-3">
-  <div class="prelative container">
-    <div class="row">
-      <div class="col-md-30">
-        <div class="content">
-          <div class="title pt-5 mt-5">
-            <p>Visi</p>
+<section class="about-2 outer-content-page backabout-3k">
+  <div class="prelatife container">
+      <div class="py-3"></div>
+      <div class="d-block mx-auto text-center">
+        <img src="<?php echo $this->assetBaseurl2 ?>about-3k.png" alt="" class="img img-fluid">
+      </div>
+      <div class="py-3"></div>
+
+      <div class="row sub-about3k-content text-center">
+        <div class="col-md-15">
+          <div class="top pb-2">
+            <h3>01</h3>
+            <small>Kehandalan</small>
           </div>
-          <div class="isi">
-            <?php echo $this->setting['about3_visi'] ?>
+          <p>Para pelanggan dapat mempercayai kualitas produk maupun proses produksinya. Kami bangga akan efisiensi kinerja kami dan kemampuan kami mempertahankan kualitas.</p>
+        </div>
+        <div class="col-md-15">
+          <div class="top pb-2">
+            <h3>02</h3>
+            <small>Kualitas</small>
           </div>
-          <div class="title">
-            <p>Misi</p>
+          <p>Kami mengkombinasikan pengalaman lebih dari 30 tahun dengan teknologi modern mesin produksi serta kemurnian material bahan baku yang dapat anda rasakan di setiap sentuhan pada produk Lucky Star Plastic.</p>
+        </div>
+        <div class="col-md-15">
+          <div class="top pb-2">
+            <h3>03</h3>
+            <small>Kenyamanan</small>
           </div>
-          <div class="isi">
-            <?php echo $this->setting['about3_misi'] ?>
+          <p>Kami mempermudah hidup anda dengan mempersembahkan serangkaian produk yang praktis dan membantu kegiatan sehari hari anda menjadi lebih ringkas.</p>
+        </div>
+        <div class="col-md-15">
+          <div class="top pb-2">
+            <h3>04</h3>
+            <small>Kepuasan</small>
           </div>
+          <p>Standar masyarakat modern dan kontrol kualitas kami yang sempurna akan berjalan seirama, menghasilkan produk yang memuaskan dan melebihi standar pasaran.</p>
         </div>
       </div>
-      <div class="col-md-30">
+      
+      <div class="py-5"></div>
 
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="home-sec-3">
-	<div class="prelative container">
-		<div class="container2 mx-auto pt-5">
-			<div class="row pt-3">
-				
-        <div class="content">
-          <h3><?php echo $this->setting['home_section4_title'] ?></h3>
-          <?php 
-          $criteria = new CDbCriteria;
-          $criteria->with = array('description');
-          $criteria->addCondition('active = "1"');
-          $criteria->addCondition('description.language_id = :language_id');
-          $criteria->params[':language_id'] = $this->languageID;
-          // $criteria->order = 'date_input DESC';
-          $modelArsim = Brand::model()->findAll($criteria);
-          ?>
-          <div class="py-3 mb-1"></div>
-          <div class="row">
-            <?php foreach ($modelArsim as $key => $value): ?>
-            <div class="col-md-15 col-30">
-              <img src="<?php echo Yii::app()->baseUrl; ?>/images/brand/<?php echo $value->image ?>" alt="">
+      <div class="sub-content-vision_mission text-center">
+        <div class="row">
+          <div class="col-md-10"></div>
+          <div class="col-md-40">
+            <div class="row my-auto">
+              <div class="col-md-30 py-5">
+                <h3>Visi</h3>
+                <p>OPS Houston provides high-end, luxury care for your cosmetic surgeries and procedures. You’ll be treated with highly personalized care in a luxury facility that makes your cosmetic procedure feel more like a trip to the spa. </p>
+              </div>
+              <div class="col-md-30 py-5 lines-orange">
+                <h3>Misi</h3>
+                <p>OPS Houston provides high-end, luxury care for your cosmetic surgeries and procedures. You’ll be treated with highly personalized care in a luxury facility that makes your cosmetic procedure feel more like a trip to the </p>
+              </div>
             </div>
-            <?php endforeach ?>
           </div>
-
+          <div class="col-md-10"></div>
         </div>
+      </div>
 
-			</div>
-		</div>
-	</div>
+      <div class="py-5"></div>
+      <div class="py-2"></div>
+
+      <div class="clearfix"></div>
+  </div>
 </section>

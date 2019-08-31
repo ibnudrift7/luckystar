@@ -1,4 +1,9 @@
-<section class="home-sec-3 footer2">
+<?php 
+    $e_activemenu = $this->action->id;
+    $controllers_ac = $this->id;
+    $active_menu_pg = $controllers_ac.'/'.$e_activemenu;
+?>
+<section class="home-sec-3 footer2 <?php if ($active_menu_pg != 'home/index'): ?>subpage<?php endif ?>">
 	<div class="prelative container">
 		<div class="row">
 			<div class="col-md-60">

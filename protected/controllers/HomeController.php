@@ -520,10 +520,19 @@ class HomeController extends Controller
 
 	public function actionAbout()
 	{
-		$this->pageTitle = 'About Us - '.$this->pageTitle;
+		$this->pageTitle = 'Tentang Kami - '.$this->pageTitle;
 		$this->layout='//layouts/column2';
 
 		$this->render('about', array(	
+		));
+	}
+
+	public function actionMitra()
+	{
+		$this->pageTitle = 'Jadi Mitra Kami - '.$this->pageTitle;
+		$this->layout='//layouts/column2';
+
+		$this->render('mitra', array(	
 		));
 	}
 
@@ -1227,6 +1236,9 @@ Staff dari perabotplastik.com akan menghubungi anda untuk konfirmasi dan penjela
 				if ($this->setting['contact_bcc']) {
 					$config['bcc'] = array($this->setting['contact_bcc']);
 				}
+				echo "<pre>";
+				print_r($config);
+				exit;
 				// kirim email
 				Common::mail($config);
 
@@ -1237,106 +1249,6 @@ Staff dari perabotplastik.com akan menghubungi anda untuk konfirmasi dan penjela
 		}
 
 		$this->render('contact', array(
-			'model'=>$model,
-		));
-	}
-
-	public function actionContact2()
-	{
-		$this->layout='//layouts/columnIframe';
-
-		$this->pageTitle = 'Contact Us - '.$this->pageTitle;
-
-		$model = new ContactForm;
-		$model->scenario = 'insert';
-
-		if(isset($_POST['ContactForm']))
-		{
-			$model->attributes=$_POST['ContactForm'];
-
-			if($model->validate())
-			{
-				// config email
-				$messaged = $this->renderPartial('//mail/contact2',array(
-					'model'=>$model,
-				),TRUE);
-				$config = array(
-					'to'=>array($model->email, $this->setting['email'], $this->setting['contact_email'], 'renndh2003@hotmail.com', 'dvcomputers.website@outlook.com'),
-					'subject'=>'Hi, UFO Elektronika Contact from '.$model->email,
-					'message'=>$messaged,
-				);
-				if ($this->setting['contact_cc']) {
-					$config['cc'] = array($this->setting['contact_cc']);
-				}
-				if ($this->setting['contact_bcc']) {
-					$config['bcc'] = array($this->setting['contact_bcc']);
-				}
-				// kirim email
-				Common::mail($config);
-
-				Yii::app()->user->setFlash('success','Thank you for contact us. We will respond to you as soon as possible.');
-				$this->refresh();
-			}
-
-		}
-
-		$this->render('contact2', array(
-			'model'=>$model,
-		));
-	}
-	public function actionContact3()
-	{
-		$this->layout='//layouts/columnIframe';
-
-		$this->pageTitle = 'Report Bugs & Error - '.$this->pageTitle;
-
-		$model = new ContactForm2;
-		$model->scenario = 'insert';
-
-		if(isset($_POST['ContactForm2']))
-		{
-			$model->attributes=$_POST['ContactForm2'];
-
-			if($model->validate())
-			{
-				// config email
-				$messaged = $this->renderPartial('//mail/contact3',array(
-					'model'=>$model,
-				),TRUE);
-				$config = array(
-					'to'=>array($model->email, $this->setting['email'], $this->setting['contact_email'], 'renndh2003@hotmail.com', 'dvcomputers.website@outlook.com'),
-					'subject'=>'Report Bugs & Error from '.$model->email,
-					'message'=>$messaged,
-				);
-				if ($this->setting['contact_cc']) {
-					$config['cc'] = array($this->setting['contact_cc']);
-				}
-				if ($this->setting['contact_bcc']) {
-					$config['bcc'] = array($this->setting['contact_bcc']);
-				}
-				// kirim email
-				Common::mail($config);
-
-				Yii::app()->user->setFlash('success','Thank you for contact us. We will respond to you as soon as possible.');
-				$this->refresh();
-			}
-
-		}
-
-		$this->render('contact3', array(
-			'model'=>$model,
-		));
-	}
-	public function actionSeen_on()
-	{
-		$this->layout='//layouts/column2';
-
-		$this->pageTitle = 'As Seen On '.$this->pageTitle;
-
-		$model = new ContactForm;
-		$model->scenario = 'insert';
-
-		$this->render('seen_on', array(
 			'model'=>$model,
 		));
 	}

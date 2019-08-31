@@ -1,4 +1,4 @@
-<header class="header <?php if ($_SERVER['REQUEST_URI'] != '/luckystar/home/index'): ?>insidepage<?php endif ?>">
+<header class="header <?php if ($_SERVER['REQUEST_URI'] != 'home/index'): ?>insidepage<?php endif ?>">
 <div class="d-none d-sm-none d-md-block d-lg-block">
       <div class="prelative header-cont pt-3">
           <div class="row">
@@ -11,10 +11,10 @@
               <div class="col-md-28 pt-2">
                   <ul class="menu-atas">
                       <li><a href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">HOME</a></li>
-                      <li><a href="<?php echo CHtml::normalizeUrl(array('/home/produk')); ?>">TENTANG KAMI</a></li>
-                      <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about')); ?>">JADI MITRA KAMI</a></li>
-                      <li><a href="<?php echo CHtml::normalizeUrl(array('/home/merk')); ?>">BLOG</a></li>
-                      <li><a href="<?php echo CHtml::normalizeUrl(array('/home/hubungi')); ?>">HUBUNGI KAMI</a></li>
+                      <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about')); ?>">TENTANG KAMI</a></li>
+                      <li><a href="<?php echo CHtml::normalizeUrl(array('/home/mitra')); ?>">JADI MITRA KAMI</a></li>
+                      <li><a href="<?php echo CHtml::normalizeUrl(array('/blog/index')); ?>">BLOG</a></li>
+                      <li><a href="<?php echo CHtml::normalizeUrl(array('/home/contact')); ?>">HUBUNGI KAMI</a></li>
                   </ul>
               </div>
               <div class="col-md-14">
@@ -107,12 +107,11 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item"><a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/produk')); ?>">Produk Bahan Bangunan Kami</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Produk</a></li>
             <li class="nav-item"><a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/about')); ?>">Profil</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/merk')); ?>">Merk & Keagenan</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/jadiagen')); ?>">Jadi Agen Kami</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/hubungi')); ?>">Hubungi Kami</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/blog/index')); ?>">Blog Kami</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Jadi Mitra Kami</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/blog/index')); ?>">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Hubungi Kami</a></li>
           </ul>
         </div>
       </nav>
@@ -135,12 +134,11 @@
           <div class="menu-taffix">
             <ul class="list-inline d-inline">
               <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">Home</a></li>
-              <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/produk')); ?>">Produk Bahan Bangunan</a></li>
+              <li class="list-inline-item"><a href="#">Produk</a></li>
               <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/about')); ?>">Profil</a></li>
-              <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/merk')); ?>">Merk & Keagenan</a></li>
-              <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/jadiagen')); ?>">Jadi Agen</a></li>
-              <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/hubungi')); ?>">Hubungi</a></li>
+              <li class="list-inline-item"><a href="#">jadi Mitra Kami</a></li>
               <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/blog/index')); ?>">Blog</a></li>
+              <li class="list-inline-item"><a href="#">Hubungi</a></li>
             </ul>
           </div>
         </div>
