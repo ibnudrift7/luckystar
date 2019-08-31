@@ -1,7 +1,13 @@
-<section class="cover_insidepage prelative blog-page">
-  <div class="sub-content-title text-center">
-    <h3>Blog</h3>
-  </div>
+<section class="cover-insides2">
+    <div class="prelative container">
+      <div class="teks">
+          <div class="row">
+              <div class="col-md-60">
+                  <h1 class="teks-cover">Blog</h1>
+              </div>
+          </div>
+      </div>
+    </div>
 </section>
 
 
@@ -39,9 +45,9 @@
             <div class="items pb-4">
               <div class="picture"><img src="https://placehold.it/468x304" alt="" class="img img-fluid"></div>
               <div class="info pt-2">
-                <span class="dates">22 March 2019</span>
+                <div class="dates"><p>22 March 2019</p></div>
                 <h6>Financial Stress - Simple Strategies to Overcome It</h6>
-                <a href="" class="mores">Read More</a>
+                <a href="<?php echo CHtml::normalizeUrl(array('/blog/d_detail')); ?>" class="mores">Read More</a>
               </div>
             </div>
           </div>

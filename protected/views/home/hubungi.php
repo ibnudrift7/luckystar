@@ -5,17 +5,17 @@ if (isset($this->setting['contact_hero_image'])) {
   $cover_page = Yii::app()->baseUrl.ImageHelper::thumb(1920,562, '/images/static/'. $this->setting['contact_hero_image'] , array('method' => 'adaptiveResize', 'quality' => '90'));
 }
 ?>
-<section class="cover-insides" <?php if ($cover_page): ?>style="background-image: url(<?php echo $cover_page ?>);"<?php endif ?> >
-    <div class="prelative container">
-        <div class="container2 mx-auto">
-            <div class="row">
-        <div class="col-md-60">
-          <button class="profil mx-auto"><?php echo $this->setting['contact_hero_title'] ?></button>
-        </div>
-        <div class="col-md-60 text-center">
-          <h2 class="mx-auto text-center pt-3"><?php echo nl2br($this->setting['contact_hero_subtitle']); ?></h2>
-        </div>
-            </div>
+
+<section class="cover-insides">
+    <div class="begrond">
+        <div class="prelative container">
+                <div class="teks">
+                    <div class="row">
+                        <div class="col-md-60">
+                            <h1 class="teks-cover">Hubungi Kami</h1>
+                        </div>
+                    </div>
+                </div>
         </div>
     </div>
 </section>

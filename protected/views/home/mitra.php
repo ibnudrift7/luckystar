@@ -6,14 +6,19 @@ if (isset($this->setting['about_hero_image'])) {
 }
 ?>
 
-<section class="cover_insidepage prelative">
-  <div class="feature-image">
-    <img src="https://placehold.it/1920x475" alt="" class="img img-fluid">
-  </div>
-  <div class="sub-content-title text-center">
-    <h3>Jadi Mitra Kami
-    </h3>
-  </div>
+
+<section class="cover-insides">
+    <div class="begrond">
+        <div class="prelative container">
+                <div class="teks">
+                    <div class="row">
+                        <div class="col-md-60">
+                            <h1 class="teks-cover">Jadi Mitra Kami</h1>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
 </section>
 
 
@@ -41,11 +46,12 @@ if (isset($this->setting['about_hero_image'])) {
             </div>
           </div>
           <div class="col-md-30">
-            <img src="https://placehold.it/740x434" alt="" class="img img fluid">
+            <img src="https://placehold.it/740x434" alt="" class="img img fluid w-100">
           </div>
         </div>
       </div>
 
+      <div class="py-3"></div>
       <div class="py-5"></div>
 
     <div class="clear clearfix"></div>
