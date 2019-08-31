@@ -52,7 +52,7 @@
       <div class="row">
         <?php for ($i=1; $i < 4; $i++) { ?>
           <div class="col-md-20">
-            <div class="items pb-4">
+            <div class="items pb-4 mb-2">
               <div class="picture"><img src="https://placehold.it/468x304" alt="" class="img img-fluid"></div>
               <div class="info pt-2">
                 <div class="dates"><p>22 March 2019</p></div>

@@ -1,4 +1,9 @@
-<header class="header <?php if ($_SERVER['REQUEST_URI'] != 'home/index'): ?>insidepage<?php endif ?>">
+<?php 
+    $e_activemenu = $this->action->id;
+    $controllers_ac = $this->id;
+    $active_menu_pg = $controllers_ac.'/'.$e_activemenu;
+?>
+<header class="header <?php if ($active_menu_pg != 'home/index'): ?>insidepage<?php endif ?>">
 <div class="d-none d-sm-none d-md-block d-lg-block">
       <div class="prelative header-cont pt-3">
           <div class="row">
