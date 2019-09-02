@@ -8,10 +8,13 @@
       <div class="prelative header-cont pt-3">
           <div class="row">
               <div class="col-md-18">
+                <div class="logo-nheader">
                   <a href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">
                       <img src="<?php echo $this->assetBaseurl; ?>logo-foot.png" alt="">
 
                   </a>
+                  <div class="clear"></div>
+                </div>
               </div>
               <div class="col-md-28 pt-2">
                   <ul class="menu-atas">
@@ -26,20 +29,20 @@
                 <div class="menu-icon">
                 
                   <div class="sosmed">
-                    <img src="<?php echo $this->assetBaseurl; ?>wa-atas.png" alt="">
+                    <img src="<?php echo $this->assetBaseurl; ?>new/wa-atas.png" alt="">
                   </div>
                   <div class="sosmed">
-                    <img src="<?php echo $this->assetBaseurl; ?>fb-atas.png" alt="">
+                    <img src="<?php echo $this->assetBaseurl; ?>new/fb-atas.png" alt="">
                   </div>
                   <div class="sosmed">
-                    <img src="<?php echo $this->assetBaseurl; ?>ig-atas.png" alt="">  
+                    <img src="<?php echo $this->assetBaseurl; ?>new/ig-atas.png" alt="">  
                   </div>
                   <div class="hr-ver"></div>
                   <div class="sosmed">
                     <img src="<?php echo $this->assetBaseurl; ?>basket-atas.png" alt="">  
                   </div>
-                  <div class="sosmed kanan">
-                    <img src="<?php echo $this->assetBaseurl; ?>list.png" alt="">  
+                  <div class="sosmed kanan prelatife">
+                    <div class="bagss_ntop"><span>0</span></div>
                   </div>
                 </div>
               </div>
@@ -76,7 +79,7 @@
       <div class="header-bottom">
           <div class="prelative header-cont">
               <div class="row">
-                  <div class="col-md-40">
+                  <div class="col-md-44">
                       <div class="grant py-2">
                           <ul class="bawah-head">
                           <?php foreach($mod_header as $key => $value): ?>
@@ -87,13 +90,15 @@
                           </ul>
                       </div>
                   </div>
-                  <div class="col-md-20 text-right d-block">
-                      <div class="whatsapp py-2">
-                          <a href="#">
-                              <!-- <p><img src="<?php echo $this->assetBaseurl; ?>logo-wa.png" alt=""><span>
-                              WA / HOTLINE  082154073738 
-                              </span></p> -->
-                          </a>
+                  <div class="col-md-16 text-right">
+                      <div class="searchs_boxprd py-2">
+                          <form class="form-inline" method="get" action="#" onsubmit="alert('underconstruction'); return false;">
+                            <div class="form-group mb-2">
+                              <label for="staticEmail2 d-inline-block">Cari produk</label>
+                              <input type="text" class="form-control-plaintext d-inline-block" id="staticEmail2" value="">
+                            </div>
+                            <button type="submit" class="btn btn-link mb-2"><i class="fa fa-search"></i></button>
+                          </form>
                       </div>
                   </div>
               </div>

@@ -1,4 +1,6 @@
 @mons : 'Montserrat', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@lato: 'Lato', sans-serif;
 
 .outer-content-page {
 	.content {
@@ -99,4 +101,59 @@ section.footer{
 
 .container{
 	max-width: 1482px;
+}
+
+.menu-icon{
+	.bagss_ntop{
+		background: url('../images/list.png');
+		width: 47px;
+		height: 30px;
+		text-align: center;
+		span{
+			font-family: @lato;
+			font-size: 17px;
+			font-weight: 700;
+			color: #fff;
+			display: block;
+			text-align: center;
+			padding-left: 5px;
+			padding-top: 0px;
+		}
+	}
+	clear: both;
+}
+
+.logo-nheader{
+	margin-left: -5px;
+}
+.searchs_boxprd{
+	form{
+		.form-group{
+			label{
+				font-size: 15px;
+				font-weight: 500;
+				color: #626262;
+				padding-right: 10px;
+			}
+			input{
+				border-radius: 0px;
+				border: 0px;
+				border-bottom: 1px solid #b0b0b0;
+				max-width: 180px;
+
+				font-family: @mons;
+				// font-size: 13px;
+				// font-weight: 500;
+				// color: #000;
+			}
+		}
+		button.btn{
+			color: #626262;
+			i.fa{
+			color: #626262;
+			}
+		}
+		clear: both;
+	}
+	clear: both;
 }
