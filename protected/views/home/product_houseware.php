@@ -108,11 +108,15 @@ $mod_fav = [
 			<?php foreach($mod_fav as $key => $value): ?>
 				<div class="col-md-10">
 					<div class="box-content">
-						<div class="image"><img class="w-100" src="<?php echo $this->assetBaseurl; ?><?php echo $value['gambar'] ?>" alt=""></div>
+						<div class="image">
+                            <a href="<?php echo CHtml::normalizeUrl(array('/home/producthw')); ?>">
+                            <img class="w-100" src="<?php echo $this->assetBaseurl; ?><?php echo $value['gambar'] ?>" alt="">
+                            </a>
+                        </div>
 						<div class="judul">
-							<p><?php echo $value['judul'] ?></p>
+							<p><a href="<?php echo CHtml::normalizeUrl(array('/home/producthwDet')); ?>"><?php echo $value['judul'] ?></a></p>
 						</div>
-						<div class="lihat"><a href="#">lihat produk</a></div>
+						<div class="lihat"><a href="<?php echo CHtml::normalizeUrl(array('/home/producthwDet')); ?>">lihat produk</a></div>
 					</div>
 				</div>
 			<?php endforeach ?>
@@ -145,7 +149,7 @@ $mod_kategori = [
 ?>
 
 
-<section class="home-sec-1">
+<section class="home-sec-1 outers_product_indexs">
 	<div class="prelative container">
 		<div class="row">
 			<div class="title-top">
@@ -155,12 +159,16 @@ $mod_kategori = [
 		<div class="row">
 			<?php foreach($mod_kategori as $key => $value): ?>
 				<div class="col-md-15">
-					<div class="image"><img class="w-100" src="<?php echo $this->assetBaseurl; ?><?php echo $value['gambar'] ?>" alt=""></div>
+					<div class="image">
+                        <a href="<?php echo CHtml::normalizeUrl(array('/home/producthw')); ?>">
+                        <img class="w-100" src="<?php echo $this->assetBaseurl; ?><?php echo $value['gambar'] ?>" alt="">
+                        </a>
+                    </div>
 					<div class="title">
-						<p><?php echo $value['judul'] ?></p>
+						<p><a href="<?php echo CHtml::normalizeUrl(array('/home/producthw')); ?>"><?php echo $value['judul'] ?></a></p>
 					</div>
 					<div class="lihat_kat">
-						<a href="#">lihat kategori</a>
+						<a href="<?php echo CHtml::normalizeUrl(array('/home/producthw')); ?>">lihat kategori</a>
 					</div>
 				</div>
 			<?php endforeach ?>

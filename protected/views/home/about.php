@@ -32,17 +32,20 @@ if (isset($this->setting['about_hero_image'])) {
 
       <div class="py-5"></div>
 
-      <div class="sub-section2">
-        <div class="row">
-          <div class="col-md-25">
-            <div class="pos-absolu-featureds_image">
-              <img src="<?php echo $this->assetBaseurl ?>tentang-kami_03.jpg" alt="" class="img img fluid w-100">
+      <div class="sub-section2 prelatife">
+        <div class="pos-absolu-featureds_image">
+          <img src="<?php echo $this->assetBaseurl ?>tentang-kami_03.jpg" alt="" class="img img fluid">
+        </div>
+
+        <div class="posabs_contnet">
+          <div class="row">
+            <div class="col-md-25">
             </div>
-          </div>
-          <div class="col-md-35 back-blue">
-            <div class="inner_section">
-              <h3>We start from scratch, with strong passion and dreams to reach.</h3>
-              <p>OPS Houston provides high-end, luxury care for your cosmetic surgeries and procedures. You’ll be treated with highly personalized care in a luxury facility that makes your cosmetic procedure feel more like a trip to the spa. More importantly, you’ll be working with some of Houston’s leading cosmetic surgeons. As plastic surgeons, Dr. Andry and Dr. Wijay spent years training in the latest cosmetic plastic surgery techniques. Drs. Andry and Wijay have been focused on cosmetic surgery from the beginning of their careers in medicine.</p>
+            <div class="col-md-35 back-blue">
+              <div class="inner_section">
+                <h3>We start from scratch, with strong passion and dreams to reach.</h3>
+                <p>OPS Houston provides high-end, luxury care for your cosmetic surgeries and procedures. You’ll be treated with highly personalized care in a luxury facility that makes your cosmetic procedure feel more like a trip to the spa. More importantly, you’ll be working with some of Houston’s leading cosmetic surgeons. As plastic surgeons, Dr. Andry and Dr. Wijay spent years training in the latest cosmetic plastic surgery techniques. Drs. Andry and Wijay have been focused on cosmetic surgery from the beginning of their careers in medicine.</p>
+              </div>
             </div>
           </div>
         </div>

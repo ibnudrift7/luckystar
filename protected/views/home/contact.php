@@ -73,7 +73,7 @@ if (isset($this->setting['about_hero_image'])) {
               <img src="<?php echo $this->assetBaseurl; ?>wa.png" alt="">
                 <div class="py-1"></div>
                 <p>
-                  <span>Whatsapp (klik untuk chat)</span><br>
+                  <span>Whatsapp <a href="https://wa.me/6281717122131">(klik untuk chat)</a></span><br>
                   0817 1712 2131
                 </p>
                 <div class="py-1"></div>
