@@ -102,7 +102,7 @@
     </div>
     <div class="d-block d-sm-block d-md-none">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">
           <img src="<?php echo $this->assetBaseurl ?>logo-foot.png" alt="" class="img-fluid img">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -129,7 +129,7 @@
     <div class="row">
       <div class="col-md-15 col-sm-15">
         <div class="lgo_web_headrs_wb">
-          <a href="#">
+          <a href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">
             <img src="<?php echo $this->assetBaseurl; ?>logo-foot.png" alt="" class="img img-fluid">
           </a>
         </div>
