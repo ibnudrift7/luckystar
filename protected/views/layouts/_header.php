@@ -80,7 +80,7 @@
           <div class="prelative header-cont">
               <div class="row">
                   <div class="col-md-44">
-                      <div class="grant py-2">
+                      <div class="grant py-3">
                           <ul class="bawah-head">
                           <?php foreach($mod_header as $key => $value): ?>
                             <li>
@@ -91,13 +91,13 @@
                       </div>
                   </div>
                   <div class="col-md-16 text-right">
-                      <div class="searchs_boxprd py-2">
+                      <div class="searchs_boxprd pt-1">
                           <form class="form-inline" method="get" action="#" onsubmit="alert('underconstruction'); return false;">
-                            <div class="form-group mb-2">
+                            <div class="form-group">
                               <label for="staticEmail2 d-inline-block">Cari produk</label>
                               <input type="text" class="form-control-plaintext d-inline-block" id="staticEmail2" value="">
                             </div>
-                            <button type="submit" class="btn btn-link mb-2"><i class="fa fa-search"></i></button>
+                            <button type="submit" class="btn btn-link"><i class="fa fa-search"></i></button>
                           </form>
                       </div>
                   </div>
