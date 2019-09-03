@@ -106,7 +106,7 @@ $mod_fav = [
 		</div>
         <div class="row">
 			<?php foreach($mod_fav as $key => $value): ?>
-				<div class="col-md-10">
+				<div class="col-md-10 col-30">
 					<div class="box-content">
 						<div class="image">
                             <a href="<?php echo CHtml::normalizeUrl(array('/home/producthw')); ?>">
@@ -158,7 +158,7 @@ $mod_kategori = [
 		</div>
 		<div class="row">
 			<?php foreach($mod_kategori as $key => $value): ?>
-				<div class="col-md-15">
+				<div class="col-md-15 col-30">
 					<div class="image">
                         <a href="<?php echo CHtml::normalizeUrl(array('/home/producthw')); ?>">
                         <img class="w-100" src="<?php echo $this->assetBaseurl; ?><?php echo $value['gambar'] ?>" alt="">

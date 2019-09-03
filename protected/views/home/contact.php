@@ -49,7 +49,7 @@ if (isset($this->setting['about_hero_image'])) {
             Indonesia</p>
             <div class="py-5"></div>
             <div class="row">
-              <div class="col line-rights">
+              <div class="col line-rights col-60">
               <img src="<?php echo $this->assetBaseurl; ?>telp.png" alt="">
                 <div class="py-1"></div>
                 <p>
@@ -59,7 +59,7 @@ if (isset($this->setting['about_hero_image'])) {
                 <div class="py-1"></div>
 
               </div>
-              <div class="col line-rights">
+              <div class="col line-rights col-60">
               <img src="<?php echo $this->assetBaseurl; ?>mail.png" alt="">
                 <div class="py-1"></div>
                 <p>
@@ -69,7 +69,7 @@ if (isset($this->setting['about_hero_image'])) {
                 <div class="py-1"></div>
 
               </div>
-              <div class="col">
+              <div class="col col-60">
               <img src="<?php echo $this->assetBaseurl; ?>wa.png" alt="">
                 <div class="py-1"></div>
                 <p>

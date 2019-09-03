@@ -21,25 +21,25 @@
     <?php endif; ?>
 
     <div class="row default">
-      <div class="col">
+      <div class="col col-60">
         <div class="form-group">
             <label for="exampleInputCompany">Nama Perusahaan</label>
             <?php echo $form->textField($model, 'company', array('class'=>'form-control')); ?>
         </div>
       </div>
-      <div class="col">
+      <div class="col col-60">
         <div class="form-group">
             <label for="exampleInputName">Nama</label>
             <?php echo $form->textField($model, 'name', array('class'=>'form-control')); ?>
         </div>
       </div>
-      <div class="col">
+      <div class="col col-60">
         <div class="form-group">
             <label for="exampleInputPhone">Telepon</label>
             <?php echo $form->textField($model, 'phone', array('class'=>'form-control')); ?>
         </div>
       </div>
-      <div class="col">        
+      <div class="col col-60">        
         <div class="form-group">
             <label for="exampleInputEmail">Email</label>
             <?php echo $form->textField($model, 'email', array('class'=>'form-control')); ?>
