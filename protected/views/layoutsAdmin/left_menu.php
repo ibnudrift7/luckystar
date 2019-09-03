@@ -46,10 +46,10 @@
                 <!-- <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/home')); ?>">Homepage</a></li> -->
                 <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/about')); ?>">Profil</a></li>
                 <li>
-                    <a href="<?php echo CHtml::normalizeUrl(array('/admin/static/merek')); ?>">Merk</a>
+                    <a href="<?php echo CHtml::normalizeUrl(array('/admin/static/merek')); ?>">Mitra</a>
                 </li>
                 <li>
-                    <a href="<?php echo CHtml::normalizeUrl(array('/admin/static/agen')); ?>">Agen</a>
+                    <a href="<?php echo CHtml::normalizeUrl(array('/admin/static/contact')); ?>">Hubungi</a>
                 </li>
             </ul>
         </li>
