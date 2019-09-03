@@ -120,7 +120,7 @@ $mod_fav = [
         <div class="box-content">
             <div class="row">
             <?php foreach($mod_fav as $key => $value): ?>
-                <div class="col-md-10">
+                <div class="col-md-10 col-30">
                     <div class="image"><img class="w-100" src="<?php echo $this->assetBaseurl; ?><?php echo $value['gambar'] ?>" alt=""></div>
                     <div class="judul">
                         <p><?php echo $value['judul'] ?></p>

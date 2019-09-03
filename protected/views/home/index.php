@@ -30,7 +30,7 @@ $mod_kategori = [
 		</div>
 		<div class="row">
 			<?php foreach($mod_kategori as $key => $value): ?>
-				<div class="col-md-15">
+				<div class="col-md-15 col-30">
 					<div class="image">
 						<a href="<?php echo CHtml::normalizeUrl(array('/home/producthw')); ?>">
 						<img class="w-100" src="<?php echo $this->assetBaseurl; ?><?php echo $value['gambar'] ?>" alt="">
@@ -136,7 +136,7 @@ $mod_fav = [
 		</div>
 		<div class="row">
 			<?php foreach($mod_fav as $key => $value): ?>
-				<div class="col-md-10">
+				<div class="col-md-10 col-30">
 					<div class="box-content">
 						<div class="image"><a href="<?php echo CHtml::normalizeUrl(array('/home/producthw')); ?>"><img class="w-100" src="<?php echo $this->assetBaseurl; ?><?php echo $value['gambar'] ?>" alt=""></a></div>
 						<div class="judul">
@@ -202,7 +202,7 @@ $mod_blog = [
 				</div>
 			</div>
 			<?php foreach($mod_blog as $key => $value): ?>
-			<div class="col-md-15">
+			<div class="col-md-15 col-30">
 				<div class="box-content">
 					<div class="image"><img class="w-100" src="<?php echo $this->assetBaseurl; ?><?php echo $value['gambar'] ?>" alt=""></div>
 					<div class="kategori">
@@ -232,19 +232,19 @@ $mod_blog = [
 		</div>
 		<form class="fielddd">
 			<div class="form-row">
-				<div class="form-group col-md-30">
+				<div class="form-group col-md-30 col-30 ">
 					<label for="inputEmail4">NAMA ANDA</label>
 					<input type="text" class="form-control" id="" placeholder="">
 				</div>
-				<div class="form-group col-md-30">
+				<div class="form-group col-md-30 col-30 ">
 					<label for="inputEmail4">EMAIL</label>
 					<input type="text" class="form-control" id="" placeholder="">
 				</div>
-				<div class="form-group col-md-30">
+				<div class="form-group col-md-30 col-30">
 					<label for="inputEmail4">TELEPON</label>
 					<input type="nama" class="form-control" id="inputEmail4" placeholder="">
 				</div>
-				<div class="form-group col-md-30">
+				<div class="form-group col-md-30 col-30 ">
 					<label for="inputEmail4">NAMA PERUSAHAAN</label>
 					<input type="email" class="form-control" id="inputEmail4" placeholder="">
 				</div>
