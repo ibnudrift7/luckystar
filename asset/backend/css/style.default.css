@@ -2108,3 +2108,6 @@ table td.center, table th.center { text-align: center; }
 		  .table-infinite tr td:nth-child(3) { display: none; }
 }
 
+.pj-form-langbar-item{
+	display: none;
+}

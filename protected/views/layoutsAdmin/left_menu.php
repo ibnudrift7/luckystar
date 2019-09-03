@@ -32,15 +32,25 @@
                 <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/slide/create')); ?>">Create Slide</a></li>
             </ul>
         </li>
+
+        <li class="dropdown"><a href="#"><span class="fa fa-heart"></span> <?php echo Tt::t('admin', 'Download Katalog Brosur') ?></a>
+            <ul>
+                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/pdf/index')); ?>">View Katalog</a></li>
+            </ul>
+        </li>
         
 
         <li>&nbsp;</li>
         <li class="dropdown"><a href="#"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'Static Page') ?></a>
             <ul>
-                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/home')); ?>">Homepage</a></li>
+                <!-- <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/home')); ?>">Homepage</a></li> -->
                 <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/about')); ?>">Profil</a></li>
-                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/merek')); ?>">Merk</a></li>
-                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/agen')); ?>">Agen</a></li>
+                <li>
+                    <a href="<?php echo CHtml::normalizeUrl(array('/admin/static/merek')); ?>">Merk</a>
+                </li>
+                <li>
+                    <a href="<?php echo CHtml::normalizeUrl(array('/admin/static/agen')); ?>">Agen</a>
+                </li>
             </ul>
         </li>
 
