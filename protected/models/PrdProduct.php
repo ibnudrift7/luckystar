@@ -122,7 +122,7 @@ class PrdProduct extends CActiveRecord
 			'data[warna]' => 'Warna',
 			'data[kemasan]' => 'Kemasan',
 			'data[feature]' => 'Free Shipping Text',
-			'data[qty_pack]' => 'Pick up At Store Text',
+			'data[qty_pack]' => 'Qty per Pack / Doz / Pcs',
 			'data[garansi_teks]' => 'Teks Garansi',
 			'data[garansi_nilai]' => 'Harga Garansi (Rp)',
 			'gallery_id' => 'Gallery Spotlight',

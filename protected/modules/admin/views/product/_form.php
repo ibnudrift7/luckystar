@@ -342,7 +342,7 @@ jQuery(document).ready(function($) {
 						<?php echo $form->textFieldRow($model,'harga',array('class'=>'input-block-level')); ?>
 					</div>
 					<div class="span3">
-						<?php // echo $form->textFieldRow($model,'harga_coret',array('class'=>'input-block-level')); ?>
+						<?php echo $form->textFieldRow($model,'data[qty_pack]',array('class'=>'input-block-level')); ?>
 					</div>
 					<?php /*
 					<div class="span3">

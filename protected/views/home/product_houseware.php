@@ -109,7 +109,7 @@ $mod_fav = [
 				<div class="col-md-10 col-30">
 					<div class="box-content">
 						<div class="image">
-                            <a href="<?php echo CHtml::normalizeUrl(array('/home/producthw')); ?>">
+                            <a href="<?php echo CHtml::normalizeUrl(array('/home/producthwDet')); ?>">
                             <img class="w-100" src="<?php echo $this->assetBaseurl; ?><?php echo $value['gambar'] ?>" alt="">
                             </a>
                         </div>

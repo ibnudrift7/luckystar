@@ -38,6 +38,7 @@
 </div>
 
 <?php echo $content ?>
+
 <script type="text/javascript">
     $(document).ready(function(){
         

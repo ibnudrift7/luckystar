@@ -159,6 +159,11 @@ $this->pageHeader=array(
 				<label for="Setting_<?php echo $model[$type]['data']->name ?>" class="control-label required"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
 				<?php echo CHtml::textField('Setting['.$model[$type]['data']->name.']', $model[$type]['data']->value, array('class'=>'span12')) ?>
 
+				<?php $type = 'contact_opening_time' ?>
+				<?php Common::createSetting($type, 'Opening Time', 'text', 'n') ?>
+				<label for="Setting_<?php echo $model[$type]['data']->name ?>" class="control-label required"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
+				<?php echo CHtml::textField('Setting['.$model[$type]['data']->name.']', $model[$type]['data']->value, array('class'=>'span12')) ?>
+
 				<?php $this->widget('bootstrap.widgets.TbButton', array(
 					'buttonType'=>'submit',
 					'type'=>'primary',

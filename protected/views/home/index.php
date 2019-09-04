@@ -1,26 +1,35 @@
 <?php
-$mod_kategori = [
-    1 => [
-        'gambar' => 'furniture.jpg',
-        'judul' => 'Furniture',
-    ],
-    [
-        'gambar' => 'houseware.jpg',
-        'judul' => 'Houseware',
-    ],
-    [
-        'gambar' => 'tableware.jpg',
-        'judul' => 'Tableware',
-    ],
-    [
-        'gambar' => 'container.jpg',
-        'judul' => 'Container',
-    ]
-];
+// $mod_kategori = [
+//     1 => [
+//         'gambar' => 'furniture.jpg',
+//         'judul' => 'Furniture',
+//     ],
+//     [
+//         'gambar' => 'houseware.jpg',
+//         'judul' => 'Houseware',
+//     ],
+//     [
+//         'gambar' => 'tableware.jpg',
+//         'judul' => 'Tableware',
+//     ],
+//     [
+//         'gambar' => 'container.jpg',
+//         'judul' => 'Container',
+//     ]
+// ];
 ?>
 
+<?php 
+$criteria = new CDbCriteria;
+$criteria->with = array('description');
+// $criteria->addCondition('t.id = :id');
+// $criteria->params[':id'] = $_GET['category'];
+$criteria->addCondition('t.type = :type');
+$criteria->params[':type'] = 'category';
+$criteria->order = 't.sort ASC';
+$mod_kategori = PrdCategory::model()->findAll($criteria);
 
-
+?>
 <section class="home-sec-1">
 	<div class="prelative container">
 		<div class="row">
