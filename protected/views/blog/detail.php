@@ -1,18 +1,89 @@
-<section class="cover-blog">
-  <div class="prelative container py-5">
-    <div class="container2 mx-auto py-5">
-      <div class="row py-5">
-        <div class="col-md-60 text-center pt-3">
-          <button class="profil mx-auto">Blog</button>
-        </div>
-        <div class="col-md-60 text-center pt-4">
-          <h2 class="mx-auto">Aneka Artikel Dan Tips Seputar Dunia Bahan Bangunan Oleh Arsimetris Djaja Banjarmasin.</h2>  
-        </div>
+<section class="cover-insides2">
+    <div class="prelative container">
+      <div class="teks">
+          <div class="row">
+              <div class="col-md-60">
+                  <h1 class="teks-cover">Blog</h1>
+              </div>
+          </div>
       </div>
     </div>
+</section>
+
+<section class="blog-det-1 outer-content-page back-cream blog-page">
+  <div class="prelatife container">
+      <div class="py-5"></div>
+
+      <div class="blocks-page-detailblog text-center d-block mx-auto">
+        <div class="tops text-center">
+          <div class="dates d-block pb-3"><p><?php echo date("d M Y", strtotime($dataBlog->date_input)); ?></p></div>
+          <h1 class="title pb-5"><?php echo $dataBlog->description->title ?></h1>
+        </div>
+        <div class="picture pb-5">
+          <img src="https://placehold.it/907x590" alt="" class="img img-fluid">
+        </div>
+
+        <?php echo $dataBlog->description->content; ?>
+        <div class="clearfix"></div>
+        <!-- <div class="py-4"></div> -->
+
+      <div class="row d-none">
+        <div class="col-md-20"><p class="bottom text-left"><a href="<?php echo CHtml::normalizeUrl(array('/blog/d_index')); ?>">Sebelumnya</a></p></div>
+        <div class="col-md-20"><p class="home text-center"><a href="<?php echo CHtml::normalizeUrl(array('/home/d_detail')); ?>">BLOG INDEX</a></p></div>
+        <div class="col-md-20"><p class="bottom text-right"><a href="<?php echo CHtml::normalizeUrl(array('/home/d_detail')); ?>">Berikutnya</a></p></div>
+      </div>
+      </div>
+      
+      <div class="py-5"></div>
+    <div class="clear clearfix"></div>
   </div>
 </section>
 
+<section class="blogpages-other py-5 back-white">
+  <div class="prelatife container">
+  <div class="py-4"></div>
+
+    <div class="text-center">
+      <h4>Blog Lainnya</h4>
+    </div>
+    <div class="py-3"></div>
+    
+    <div class="sub-section2 outers_list_blog">
+      <div class="row">
+        <?php foreach ($dataBlogs->getData() as $key => $value): ?>
+            <div class="col-md-20">
+              <div class="items pb-4 mb-2">
+                <div class="picture">
+                  <a href="<?php echo CHtml::normalizeUrl(array('/blog/detail', 'id'=> $value->id)); ?>">
+                  <img class="img w-100" src="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(468,304, '/images/blog/'. $value->image, array('method' => 'adaptiveResize', 'quality' => '90')) ?>" alt="">
+                  </a>
+                </div>
+                <div class="info pt-2">
+                  <div class="dates"><p><?php echo date("d M Y", strtotime($value->date_input)); ?></p></div>
+                  <h6><a href="<?php echo CHtml::normalizeUrl(array('/blog/detail', 'id'=> $value->id)); ?>"><?php echo $value->description->title ?></a></h6>
+                  <a href="<?php echo CHtml::normalizeUrl(array('/blog/detail', 'id'=> $value->id)); ?>" class="mores">Read More</a>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+          <?php endforeach ?>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="py-4"></div>
+
+
+
+    <div class="clearfix"></div>
+  </div>
+</section>
+
+
+
+
+
+<?php
+/*
 <section class="blog-detail">
   <div class="prelative container">
     <div class="row">
@@ -93,76 +164,6 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-
-
-
-
-<?php
-/*
-<section class="outers_page_static back_cream mh500 back_grey_pattern">
-  <div class="insides sub_page_static about_us">
-    <div class="prelatife container">
-      <div class="clear height-50"></div><div class="height-10"></div>
-
-      <div class="content-text insides_static">
-        <h1 class="title_page">BLOGS</h1>
-        <div class="clear"></div>
-        <h3 class="tagline"><?php echo $dataBlog->description->title ?></h3>
-        <div class="clear"></div>
-        <div class="row details_cont_articles">
-          <div class="col-md-9 text-left">
-            <div class="left_cont">
-              <div class="mw906">
-
-                <img src="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(980,1000, '/images/blog/'.$dataBlog->image , array('method' => 'resize', 'quality' => '90')) ?>" alt="">
-
-                <?php echo $dataBlog->description->content ?>
-
-                <div class="clear height-10"></div>
-                <div class="shares-text text-left p_shares_article">
-                    <span class="inline-t">SHARE</span>&nbsp; / &nbsp;<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=#">FACEBOOK</a>&nbsp; /
-                    &nbsp;<a target="_blank" href="https://plus.google.com/share?url=#">GOOGLE PLUS</a>&nbsp; /
-                    &nbsp;<a target="_blank" href="https://twitter.com/home?status=#">TWITTER</a>
-                </div>
-
-                <div class="clear"></div>
-              </div>
-            </div>
-
-          </div>
-          <div class="col-md-3 text-left">
-            <div class="right_cont">
-              <div class="padding-left-25">
-                  <span class="sub_page_title">Other Blogs</span>
-              </div>
-              <div class="clear"></div>
-              <div class="right_sub_menu">
-                <ul class="list-unstyled">
-                    <?php foreach ($dataBlogs->getData() as $key => $value): ?>
-                        
-                  <li><a href="<?php echo CHtml::normalizeUrl(array('detail', 'id'=>$value->id)); ?>"><?php echo $value->description->title ?></a></li>
-                    <?php endforeach ?>
-                </ul>
-                <div class="clear"></div>
-              </div>
-
-              <div class="clear"></div>
-            </div>
-            <div class="clear"></div>
-          </div>
-        </div>
-        
-
-        <div class="clear"></div>
-      </div>
-      
-      <div class="clear height-20"></div>
-      <div class="clear height-50"></div>
-    </div>
-    <div class="clear"></div>
   </div>
 </section>
 */ ?>

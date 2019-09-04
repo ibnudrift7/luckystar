@@ -50,12 +50,12 @@ class BlogController extends Controller
 		$dataBlog = new CActiveDataProvider('Blog', array(
 			'criteria'=>$criteria,
 		    'pagination'=>array(
-		        'pageSize'=>12,
+		        'pageSize'=>15,
 		    ),
 		));
 
 		$this->layout='//layouts/column2';
-		$this->pageTitle = 'News & Articles - '.$this->pageTitle;
+		$this->pageTitle = 'Blog - '.$this->pageTitle;
 
 		$this->render('index', array(
 			'dataBlog'=>$dataBlog,
@@ -87,7 +87,7 @@ class BlogController extends Controller
 		    ),
 		));
 
-		$this->pageTitle = $dataBlog->description->title . ' - News & Articles - '.$this->pageTitle;
+		$this->pageTitle = $dataBlog->description->title . ' - Blog - '.$this->pageTitle;
 
 		$this->layout='//layouts/column2';
 		$this->render('detail', array(

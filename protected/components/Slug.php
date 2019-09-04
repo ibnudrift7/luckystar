@@ -5,7 +5,7 @@
  */
 class Slug {
 
-    static public function Create($text)
+    public static function Create($text)
     { 
       // replace non letter or digits by -
       $text = preg_replace('~[^\\pL\d]+~u', '-', $text);

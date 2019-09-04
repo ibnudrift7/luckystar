@@ -110,46 +110,43 @@ class HomeController extends Controller
 
 	public function actionIndex()
 	{
-		// $criteria2=new CDbCriteria;
-		// $criteria2->with = array('description');
-		// $criteria2->order = 'date DESC';
-		// $criteria2->addCondition('status = "1"');
-		// $criteria2->addCondition('description.language_id = :language_id');
-		// $criteria2->params[':language_id'] = $this->languageID;
+		$criteria2=new CDbCriteria;
+		$criteria2->with = array('description');
+		$criteria2->order = 'date DESC';
+		$criteria2->addCondition('status = "1"');
+		$criteria2->addCondition('description.language_id = :language_id');
+		$criteria2->params[':language_id'] = $this->languageID;
 
-		// if ($_GET['category']) {
-		// 	$criteria = new CDbCriteria;
-		// 	$criteria->with = array('description');
-		// 	$criteria->addCondition('t.id = :id');
-		// 	$criteria->params[':id'] = $_GET['category'];
-		// 	$criteria->addCondition('t.type = :type');
-		// 	$criteria->params[':type'] = 'category';
-		// 	$criteria->order = 'sort ASC';
-		// 	$strCategory = PrdCategory::model()->find($criteria);
+		if ($_GET['category']) {
+			$criteria = new CDbCriteria;
+			$criteria->with = array('description');
+			$criteria->addCondition('t.id = :id');
+			$criteria->params[':id'] = $_GET['category'];
+			$criteria->addCondition('t.type = :type');
+			$criteria->params[':type'] = 'category';
+			$criteria->order = 'sort ASC';
+			$strCategory = PrdCategory::model()->find($criteria);
 
-		// 	// $inArray = PrdProduct::getInArrayCategory($_GET['category']);
-		// 	// $criteria2->addInCondition('t.category_id', $inArray);
-		// 	$criteria2->addCondition('t.tag LIKE :category');
-		// 	$criteria2->params[':category'] = '%category='.$_GET['category'].',%';
-		// }else{
-		// 	$criteria2->addCondition('t.tag LIKE :category');
-		// 	$criteria2->params[':category'] = '%category=35,%';
-		// }
-		// $pageSize = 8;
+			// $inArray = PrdProduct::getInArrayCategory($_GET['category']);
+			// $criteria2->addInCondition('t.category_id', $inArray);
+			$criteria2->addCondition('t.tag LIKE :category');
+			$criteria2->params[':category'] = '%category='.$_GET['category'].',%';
+		}
+		$pageSize = 18;
 
-		// $product = new CActiveDataProvider('PrdProduct', array(
-		// 	'criteria'=>$criteria2,
-		//     'pagination'=>array(
-		//         'pageSize'=>$pageSize,
-		//     ),
-		// ));
+		$product = new CActiveDataProvider('PrdProduct', array(
+			'criteria'=>$criteria2,
+		    'pagination'=>array(
+		        'pageSize'=>$pageSize,
+		    ),
+		));
 
 		// $model = new ContactForm;
 		// $model->scenario = 'insert';
 
 		$this->layout='//layouts/column1';
 		$this->render('index', array(
-			// 'product'=>$product,
+			'products'=>$product,
 			// 'model'=>$model,
 		));
 	}
