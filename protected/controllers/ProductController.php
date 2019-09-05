@@ -154,7 +154,7 @@ class ProductController extends Controller
 		));
 
 		$this->layout='//layouts/column2';
-		$this->pageTitle = $strCategory->description->name. (($strParentCategory != null) ? ' - '.$strParentCategory->description->name.' - ' : ' ' ).$this->pageTitle;
+		$this->pageTitle = ucwords(strtolower($strCategory->description->name)). (($strParentCategory != null) ? ' - '.$strParentCategory->description->name.' - ' : ' ' ).$this->pageTitle;
 
 		$this->render('index_list', array(
 			'product'=>$product,

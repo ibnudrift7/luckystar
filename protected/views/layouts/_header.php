@@ -75,6 +75,15 @@
               'isi' => 'OTHER'
             ]
         ];
+
+        $criteria = new CDbCriteria;
+        $criteria->with = array('description');
+        $criteria->addCondition('t.type = :type');
+        $criteria->params[':type'] = 'category';
+        $criteria->order = 't.sort ASC';
+        $criteria->limit = 11;
+
+        $mod_kategori = PrdCategory::model()->findAll($criteria);
       ?>
       <div class="header-bottom">
           <div class="prelative header-cont">
@@ -82,9 +91,9 @@
                   <div class="col-md-44">
                       <div class="grant py-3">
                           <ul class="bawah-head">
-                          <?php foreach($mod_header as $key => $value): ?>
+                          <?php foreach($mod_kategori as $key => $value): ?>
                             <li>
-                              <p><a href="<?php echo CHtml::normalizeUrl(array('/home/producthw')); ?>"><?php echo $value['isi'] ?></a></p>
+                              <p><a href="<?php echo CHtml::normalizeUrl(array('/product/index', 'category'=> $value->id )); ?>"><?php echo $value->description->name; ?></a></p>
                             </li>
                           <?php endforeach ?>
                           </ul>
@@ -117,7 +126,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item"><a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/producthw')); ?>">Produk</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/product/index')); ?>">Produk</a></li>
             <li class="nav-item"><a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/about')); ?>">Profil</a></li>
             <li class="nav-item"><a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/mitra')); ?>">Jadi Mitra Kami</a></li>
             <li class="nav-item"><a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/blog/d_index')); ?>">Blog</a></li>
@@ -144,7 +153,7 @@
           <div class="menu-taffix">
             <ul class="list-inline d-inline">
               <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">Home</a></li>
-              <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/producthw')); ?>">Produk</a></li>
+              <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/product/index')); ?>">Produk</a></li>
               <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/about')); ?>">Profil</a></li>
               <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/mitra')); ?>">jadi Mitra Kami</a></li>
               <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/blog/d_index')); ?>">Blog</a></li>

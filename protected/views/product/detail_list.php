@@ -3,6 +3,158 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
+
+
+
+
+
+<section class="cover-proddet">
+    <div class="prelative container">
+        <div class="row">
+            <div class="col-md-60">
+                <div class="content">
+                    <div class="title">
+                        <h4>Houseware Collection</h4>
+                        <p>By Lucky Star Plastics</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<?php
+$datas = unserialize($data->data);
+$mod_prodisi = [
+    1 => [
+        'title' => 'ITEM CODE',
+        'isi' => $data->kode,
+    ],
+    [
+        'title' => 'SIZE',
+        'isi' => $datas['size'],
+    ],
+    [
+        'title' => 'MATERIAL',
+        'isi' => $datas['material'],
+    ],
+    [
+        'title' => 'DESCRIPTION',
+        'isi' => $data->description->desc,
+    ]
+];
+?>
+
+<section class="breadcrumb-det">
+    <div class="prelative container">
+        <?php 
+        $cat_name = $category->description->name;
+        ?>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="<?php echo CHtml::normalizeUrl(array('/product/index', 'category'=> $category->id)); ?>"><?php echo ucwords(strtolower($cat_name)); ?> Collection</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><?php echo $data->description->name; ?></li>
+            </ol>
+            <div class="back">
+                <a href="#" onclick="window.history.back();">
+                <p>Kembali</p>
+                </a>
+            </div>
+        </nav>
+
+        <div class="row">
+            <div class="col-md-30">
+                <div class="image">
+                  <img class="img img-fluid w-100" src="<?php echo Yii::app()->baseUrl.'/images/product/'.$data->image; ?>" alt="">
+                </div>
+            </div>
+            <div class="col-md-30">
+                <div class="title">
+                    <p><?php echo ucwords( strtolower( $data->description->name ) ) ?></p>
+                </div>
+                <div class="hr-garis"></div>
+                <?php foreach($mod_prodisi as $key => $value): ?>
+                <div class="row no-gutters">
+                    <div class="col-md-17">
+                        <div class="prodtit">
+                            <p><?php echo $value['title'] ?></p>
+                        </div>
+                    </div>
+                    <div class="col-md-43">
+                        <div class="prodisi">
+                            <p><?php echo $value['isi'] ?></p>
+                        </div>
+                    </div>
+                </div>
+                <?php endforeach ?>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<?php
+$mod_fav = [
+    1 => [
+        'gambar' => 'favorite1.jpg',
+        'judul' => 'Baki Anyam Besar',
+    ],
+    [
+        'gambar' => 'favorite2.jpg',
+        'judul' => 'Baki Anyam Kecil',
+    ],
+    [
+        'gambar' => 'favorite3.jpg',
+        'judul' => 'Keranjang Anyam Bundar',
+    ],
+    [
+        'gambar' => 'favorite4.jpg',
+        'judul' => 'Keranjang Anyam Besar',
+    ],
+    [
+        'gambar' => 'favorite5.jpg',
+        'judul' => 'Pel pelan plastik',
+    ],
+    [
+        'gambar' => 'favorite6.jpg',
+        'judul' => 'Pemeras Jeruk',
+    ]
+];
+?>
+
+<section class="prodhw-dt">
+    <div class="prelative container">
+        <div class="row">
+      <div class="title-top">
+        <p>Kategori Favorit Produk Plastik Lucky Star</p>
+      </div>
+        </div>
+        <div class="box-content">
+            <div class="row justify-content-center">
+            <?php foreach($product as $key => $value): ?>
+            <div class="col-md-10 col-30">
+              <div class="box-content">
+                <div class="image">
+                                <a href="<?php echo CHtml::normalizeUrl(array('/product/detail', 'id'=> $value->id)); ?>">
+                                <img class="img img-fluid w-100" src="<?php echo Yii::app()->baseUrl.'/images/product/'.$value->image; ?>" alt="">
+                                </a>
+                            </div>
+                <div class="judul">
+                  <p><a href="<?php echo CHtml::normalizeUrl(array('/product/detail', 'id'=> $value->id)); ?>"><?php echo $value->description->name ?></a></p>
+                </div>
+                <div class="lihat"><a href="<?php echo CHtml::normalizeUrl(array('/product/detail', 'id'=> $value->id)); ?>">lihat produk</a></div>
+              </div>
+            </div>
+          <?php endforeach ?>
+            </div>
+        </div>
+    </div>
+</section>
+
+<?php
+/*
 <section class="produk-detail-sec-1 pt-5">
   <div class="py-5"></div>
   <div class="prelative container pt-4">
@@ -202,3 +354,4 @@
     </div>
   </div>
 </section>
+*/ ?>
