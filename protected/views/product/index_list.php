@@ -3,7 +3,11 @@
         <div class="row">
             <div class="col-md-60">
                 <div class="title">
+                    <?php if (isset($_GET['category'])): ?>
                     <h3><?php echo ucwords( strtolower($strCategory->description->name) ); ?> Collection</h3>
+                    <?php else: ?>
+                    <h3>Products Collection</h3>
+                    <?php endif ?>
                     <p>By Lucky Star Plastics</p>
                 </div>
             </div>
@@ -36,7 +40,7 @@
       <p>Search Products: "<?php echo $_GET['q'] ?>"</p>
     </div>
     <?php endif ?>
-      
+      <div class="py-3"></div>
       <div class="row justify-content-center">
       <?php foreach($product->getData() as $key => $value): ?>
         <div class="col-md-10 col-30">
