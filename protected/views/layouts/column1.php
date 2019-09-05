@@ -39,8 +39,8 @@ $slide = Slide::model()->with(array('description'))->findAll($criteria);
                     </div>
                     <?php endif ?>
                 </div>
-            </div>
             <?php endforeach ?>
+            </div>
             
             <ol class="carousel-indicators">
                 <?php foreach ($slide as $key => $value): ?>
