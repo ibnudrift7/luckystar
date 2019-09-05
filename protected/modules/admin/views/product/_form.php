@@ -344,6 +344,9 @@ jQuery(document).ready(function($) {
 					<div class="span3">
 						<?php echo $form->textFieldRow($model,'data[qty_pack]',array('class'=>'input-block-level')); ?>
 					</div>
+					<div class="span3">
+						<?php echo $form->textFieldRow($model,'data[satuan_pack]',array('class'=>'input-block-level')); ?>
+					</div>
 					<?php /*
 					<div class="span3">
 						<?php echo $form->textFieldRow($model,'stock',array('class'=>'input-block-level',

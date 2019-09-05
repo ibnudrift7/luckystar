@@ -42,7 +42,7 @@
                     <img src="<?php echo $this->assetBaseurl; ?>basket-atas.png" alt="">  
                   </div>
                   <div class="sosmed kanan prelatife">
-                    <div class="bagss_ntop"><span>0</span></div>
+                    <div class="bagss_ntop"><a href="<?php echo CHtml::normalizeUrl(array('/cart/shop')); ?>"><span><?php echo Cart::getTotalCartItem() ?></span></a></div>
                   </div>
                 </div>
               </div>
@@ -52,30 +52,6 @@
           </div>
       </div>
       <?php
-        $mod_header = [
-            1 => [
-                'isi' => 'HOUSEWARE'
-            ],
-            [
-              'isi' => 'TABLE WARE'
-            ],
-            [
-              'isi' => 'KITCHEN WARE'
-            ],
-            [
-              'isi' => 'OFFICE'
-            ],
-            [
-              'isi' => 'FURNITURE'
-            ],
-            [
-              'isi' => 'CONTAINER'
-            ],
-            [
-              'isi' => 'OTHER'
-            ]
-        ];
-
         $criteria = new CDbCriteria;
         $criteria->with = array('description');
         $criteria->addCondition('t.type = :type');
@@ -101,10 +77,10 @@
                   </div>
                   <div class="col-md-16 text-right">
                       <div class="searchs_boxprd pt-1">
-                          <form class="form-inline" method="get" action="#" onsubmit="alert('underconstruction'); return false;">
+                          <form class="form-inline" method="get" action="<?php echo CHtml::normalizeUrl(array('/product/index')); ?>">
                             <div class="form-group">
                               <label for="staticEmail2 d-inline-block">Cari produk</label>
-                              <input type="text" class="form-control-plaintext d-inline-block" id="staticEmail2" value="">
+                              <input type="text" name="q" class="form-control-plaintext d-inline-block" id="staticEmail2" value="">
                             </div>
                             <button type="submit" class="btn btn-link"><i class="fa fa-search"></i></button>
                           </form>

@@ -5,9 +5,6 @@
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
 
 
-
-
-
 <section class="cover-proddet">
     <div class="prelative container">
         <div class="row">
@@ -22,9 +19,6 @@
         </div>
     </div>
 </section>
-
-
-
 <?php
 $datas = unserialize($data->data);
 $mod_prodisi = [
@@ -39,6 +33,10 @@ $mod_prodisi = [
     [
         'title' => 'MATERIAL',
         'isi' => $datas['material'],
+    ],
+    [
+        'title' => ($datas['qty_pack'] != '')? 'PACK' : false,
+        'isi' => $datas['qty_pack'].' / '.$datas['satuan_pack'],
     ],
     [
         'title' => 'DESCRIPTION',
@@ -76,19 +74,71 @@ $mod_prodisi = [
                 </div>
                 <div class="hr-garis"></div>
                 <?php foreach($mod_prodisi as $key => $value): ?>
+                  <?php if ($value['title']): ?>
+                  <div class="row no-gutters">
+                      <div class="col-md-17">
+                          <div class="prodtit">
+                              <p><?php echo $value['title'] ?></p>
+                          </div>
+                      </div>
+                      <div class="col-md-43">
+                          <div class="prodisi">
+                              <p><?php echo $value['isi'] ?></p>
+                          </div>
+                      </div>
+                  </div>
+                  <?php endif ?>
+                <?php endforeach ?>
+                <form action="<?php echo CHtml::normalizeUrl(array('addcart', 'category'=>$_GET['category'])); ?>" method="post">
+                  <input type="hidden" id="price-item" value="<?php echo $data->harga ?>">
+                  <input type="hidden" name="id" value="<?php echo $data->id ?>">
+                  <input type="hidden" name="option" class="form_size_id" value="">
+                  <?php if(Yii::app()->user->hasFlash('success')): ?>
+                  <script type="text/javascript">
+                  swal({
+                    title: "<?php echo Yii::app()->user->getFlash('success') ?>",
+                    text: "Do you want to continue shopping?",
+                    type: "success",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "Yes, Continue Shopping",
+                    cancelButtonText: "Go to Cart",
+                    // closeOnConfirm: false,
+                    closeOnCancel: false
+                  },
+                  function(isConfirm){
+                    if (isConfirm) {
+                      
+                    } else {
+                      window.location.href = '<?php echo CHtml::normalizeUrl(array('/cart/shop')); ?>';
+                    }
+                  });
+                  </script>
+                  <?php endif; ?>
+
+                  <?php if(Yii::app()->user->hasFlash('danger')): ?>
+                      <?php $this->widget('bootstrap.widgets.TbAlert', array(
+                          'alerts'=>array('danger'),
+                      )); ?>
+                  <?php endif; ?>
                 <div class="row no-gutters">
                     <div class="col-md-17">
                         <div class="prodtit">
-                            <p><?php echo $value['title'] ?></p>
+                            <p>Quantity</p>
                         </div>
                     </div>
                     <div class="col-md-43">
                         <div class="prodisi">
-                            <p><?php echo $value['isi'] ?></p>
+                            <p>
+                              <input type="number" name="qty" value="1" class="form-control">
+                              &nbsp;&nbsp;
+                              <button class="btn btn-dark" type="submit">MASUK INQUIRY</button>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <?php endforeach ?>
+              </form>
+
             </div>
         </div>
     </div>

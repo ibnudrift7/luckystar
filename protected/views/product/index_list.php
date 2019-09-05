@@ -12,82 +12,6 @@
 </section>
 
 
-<?php
-$mod_fav = [
-    1 => [
-        'gambar' => 'favorite1.jpg',
-        'judul' => 'Baki Anyam Besar',
-    ],
-    [
-        'gambar' => 'favorite2.jpg',
-        'judul' => 'Baki Anyam Kecil',
-    ],
-    [
-        'gambar' => 'favorite3.jpg',
-        'judul' => 'Keranjang Anyam Bundar',
-    ],
-    [
-        'gambar' => 'favorite4.jpg',
-        'judul' => 'Keranjang Anyam Besar',
-    ],
-    [
-        'gambar' => 'favorite5.jpg',
-        'judul' => 'Pel pelan plastik',
-    ],
-    [
-        'gambar' => 'favorite6.jpg',
-        'judul' => 'Pemeras Jeruk',
-    ],
-    [
-        'gambar' => 'favorite7.jpg',
-        'judul' => 'Baki Anyam Besar',
-    ],
-    [
-        'gambar' => 'favorite8.jpg',
-        'judul' => 'Baki Anyam Kecil',
-    ],
-    [
-        'gambar' => 'favorite9.jpg',
-        'judul' => 'Keranjang Anyam Bundar',
-    ],
-    [
-        'gambar' => 'favorite10.jpg',
-        'judul' => 'Keranjang Anyam Besar',
-    ],
-    [
-        'gambar' => 'favorite11.jpg',
-        'judul' => 'Pel pelan plastik',
-    ],
-    [
-        'gambar' => 'favorite12.jpg',
-        'judul' => 'Pemeras Jeruk',
-    ],
-    [
-        'gambar' => 'favorite13.jpg',
-        'judul' => 'Baki Anyam Besar',
-    ],
-    [
-        'gambar' => 'favorite14.jpg',
-        'judul' => 'Baki Anyam Kecil',
-    ],
-    [
-        'gambar' => 'favorite15.jpg',
-        'judul' => 'Keranjang Anyam Bundar',
-    ],
-    [
-        'gambar' => 'favorite16.jpg',
-        'judul' => 'Keranjang Anyam Besar',
-    ],
-    [
-        'gambar' => 'favorite17.jpg',
-        'judul' => 'Pel pelan plastik',
-    ],
-    [
-        'gambar' => 'favorite18.jpg',
-        'judul' => 'Pemeras Jeruk',
-    ]
-];
-?>
 <section class="prodhw-sec-1">
     <div class="prelative container">
     <div class="atas-sendiri">
@@ -100,12 +24,18 @@ $mod_fav = [
         <div class="col-md-30">
           <div class="urutkan">
             <p>Urutkan berdasar  
-              <a href="#">Terbaru</a>  |  <a href="#">Terlama</a>  |  <a href="#">A-Z</a>
+              <a href="<?php echo CHtml::normalizeUrl(array('/product/index', 'order'=>'new-old')); ?>">Terbaru</a>  |  <a href="<?php echo CHtml::normalizeUrl(array('/product/index', 'order'=> 'old-new')); ?>">Terlama</a>  |  <a href="<?php echo CHtml::normalizeUrl(array('/product/index', 'order'=> 'a-z')); ?>">A-Z</a>
             </p>
           </div>
         </div>
       </div>
     </div>
+    
+    <?php if (isset($_GET['q']) && $_GET['q'] != ''): ?>
+    <div class="text-center py-2 pb-5">
+      <p>Search Products: "<?php echo $_GET['q'] ?>"</p>
+    </div>
+    <?php endif ?>
       
       <div class="row justify-content-center">
       <?php foreach($product->getData() as $key => $value): ?>
