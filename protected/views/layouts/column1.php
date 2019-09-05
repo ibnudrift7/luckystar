@@ -3,37 +3,50 @@
 
 <?php echo $this->renderPartial('//layouts/_header', array()); ?>
 
-<div class="fcs-wrapper outers_fcs_wrapper prelatife wrapper-slide">
-    <!-- <img class="w-100 d-none d-sm-block" src="<?php echo $this->assetBaseurl; ?>Layer-561.jpg" alt=""> -->
+ <?php
+$criteria=new CDbCriteria;
 
+$criteria->with = array('description');
+// $criteria->condition = 'active = 1';
+$criteria->addCondition('description.language_id = :language_id');
+$criteria->params[':language_id'] = $this->languageID;
+$criteria->group = 't.id';
+$criteria->order = 't.sort ASC';
+$slide = Slide::model()->with(array('description'))->findAll($criteria);
+?>                
+
+<div class="fcs-wrapper outers_fcs_wrapper prelatife wrapper-slide">
     <div id="myCarousel_home" class="carousel carousel-fade" data-ride="carousel" data-interval="4500">
             <div class="carousel-inner">
+                <?php foreach ($slide as $key => $value): ?>
                 <div class="carousel-item <?php if($key == 0): ?>active<?php endif ?> home-slider-new">
-                    
-                    <img class="w-100 d-none d-sm-block" src="<?php echo $this->assetBaseurl; ?>Layer-561.jpg" alt="First slide">
-                    <img class="w-100 d-block d-sm-none" src="<?php // echo Yii::app()->baseUrl.ImageHelper::thumb(600,980, '/images/'. $value->image2 , array('method' => 'adaptiveResize', 'quality' => '90')) ?>" alt="">
-                    
+                    <img class="w-100 d-none d-sm-block" src="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(1920,826, '/images/slide/'. $value->image , array('method' => 'adaptiveResize', 'quality' => '90')) ?>" alt="First slide">
+                    <img class="w-100 d-block d-sm-none" src="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(774, 867, '/images/slide/'. $value->image2 , array('method' => 'adaptiveResize', 'quality' => '90')) ?>" alt="">
+                    <?php if ($value->description->title): ?>
                     <div class="carousel-caption caption-slider-home mx-auto">
                         <div class="prelatife container mx-auto">
                             <div class="bxsl_tx_fcs">
                                 <div class="row no-gutters">
                                     <div class="col-md-60 mx-auto py-4 text-center">
                                         <div class="content">
-                                            <h5>Kami hadir dengan lebih dari sekedar produk plastik...</h5>
-                                            <p>Kami membawa berbagai inovasi dan kreasi aneka produk plastik menarik untuk mewarnai keseharian anda.</p>
+                                            <h5><?php echo $value->description->title ?></h5>
+                                            <p><?php echo nl2br($value->description->subtitle); ?></p>
                                         </div>
-                                        <ol class="carousel-indicators">
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                                        </ol>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <?php endif ?>
                 </div>
             </div>
+            <?php endforeach ?>
+            
+            <ol class="carousel-indicators">
+                <?php foreach ($slide as $key => $value): ?>
+                <li data-target="#myCarousel_home" data-slide-to="<?php echo $key ?>" <?php if ($key == 0): ?>class="active"<?php endif ?> ></li>
+                <?php endforeach ?>    
+            </ol>
     </div>
 </div>
 

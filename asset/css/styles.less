@@ -188,6 +188,9 @@ padding-top: 1.1rem;
 .menu-taffix ul li.active a,
 .menu-taffix ul li a:hover{ text-decoration: none; color: #888; }
 
+html,body{
+    height: 100%;
+}
 .fcs-wrapper.outers_fcs_wrapper{
     position: relative; z-index: 10;
     min-height: 600px; height: auto; 
@@ -198,7 +201,7 @@ padding-top: 1.1rem;
       // height: 100%;
       // position: absolute; top: 0px; left: 0px; width: 100%; z-index: 55; height: 100%;
       .carousel-inner{
-        // height: 100%;
+        height: 100%;
         overflow: inherit;
         .carousel-item{
           background-repeat: no-repeat;
@@ -319,10 +322,24 @@ padding-top: 1.1rem;
         // opacity: 0.5;
         // filter: alpha(opacity=50);
     }
+
+    ol.carousel-indicators{
+        background: #2b275c;
+        margin: 0 auto;
+        bottom:0;
+        width: 700px;
+        li{
+            margin: 10px 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+        }
+    }
   }
 
 section.home-sec-1{
-    padding-top: 320px;
+    // padding-top: 320px;
+    padding-top: 125px;
     .title-top{
         padding-bottom: 45px;
         margin: 0 auto;
