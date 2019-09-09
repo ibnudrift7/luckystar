@@ -41,12 +41,12 @@ class PrdProductDescription extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('language_id, name, desc', 'required'),
+			array('language_id, name', 'required'),
 			array('product_id, language_id', 'numerical', 'integerOnly'=>true),
 			array('name, meta_title', 'length', 'max'=>200),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('meta_desc, meta_key, note, subtitle', 'safe'),
+			array('meta_desc, meta_key, note, subtitle, desc', 'safe'),
 			array('id, product_id, language_id, name, desc, meta_title, meta_desc, meta_key', 'safe', 'on'=>'search'),
 		);
 	}
