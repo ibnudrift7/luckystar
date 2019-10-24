@@ -160,7 +160,7 @@
 		    </div>
 		    <div class="widgetcontent">
 				<?php echo $form->fileFieldRow($model,'image',array(
-				'hint'=>'<b>Note:</b> Image size is 1160 x 645px. Larger image will be automatically cropped.', 'style'=>"width: 100%")); ?>
+				'hint'=>'<b>Note:</b> Image size is 1920 x 1080px. Larger image will be automatically cropped.', 'style'=>"width: 100%")); ?>
 				<?php if ($model->scenario == 'update'): ?>
 				<img style="width: 100%;" src="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(1160,645, '/images/slide/'.$model->image , array('method' => 'adaptiveResize', 'quality' => '90')) ?>"/>
 				<?php endif; ?>

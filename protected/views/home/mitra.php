@@ -19,7 +19,34 @@ if (isset($this->setting['mitra_hero_image'])) {
         </div>
     </div>
 </section>
-
+<?php
+$mod_icon = [
+    1 => [
+        'gambar' => 'disc',
+        'teks' => 'Harga bersaing ditambah diskon yang menarik'
+    ],
+    [
+        'gambar' => 'freedelv',
+        'teks' => 'Mendapatkan Free Ongkir dan Free BS Pick Up untuk wilayah dalam pulau jawa dan Free BS Pick Up di Ekspedisi Surabaya untuk wilayah luar pulau S&K berlaku'
+    ],
+    [
+        'gambar' => 'catalog',
+        'teks' => 'Mendapatkan Hard Copy dan Soft Copy Katalog juga Daftar Harga'
+    ],
+    [
+        'gambar' => 'newinfo',
+        'teks' => 'Mendapatkan informasi produk terbaru dan promosi'
+    ],
+    [
+        'gambar' => 'freeguarantee',
+        'teks' => 'Garansi tukar barang seumur hidup S&K berlaku'
+    ],
+    [
+        'gambar' => 'warranty',
+        'teks' => 'Garansi seumur hidup untuk produk tertentu'
+    ]
+];
+?>
 
 <section class="mitra-1 outer-content-page back-cream">
   <div class="prelatife container">
@@ -32,12 +59,22 @@ if (isset($this->setting['mitra_hero_image'])) {
         <div class="col-md-8"></div>
       </div>
 
-      <div class="py-4"></div>
-
+      <div class="row">
+        <?php foreach($mod_icon as $key => $value): ?>
+          <div class="col-md-20">
+              <div class="box-content">
+                  <img class="w-100" src="<?php echo $this->assetBaseurl; ?><?php echo $value['gambar'] ?>.png" alt="">
+                  <div class="teks">
+                      <p><?php echo $value['teks'] ?></p>
+                  </div>
+              </div>
+          </div>
+        <?php endforeach ?>
+      </div>
       <div class="sub-section2 pg-mitra">
         <div class="row">
-          <div class="col-md-30">
-            <div class="inner_section pr-3">
+          <div class="col-md-30 text-left">
+            <div class="inner_section">
              <?php echo $this->setting['mitra2_content'] ?>
             </div>
           </div>
@@ -53,3 +90,27 @@ if (isset($this->setting['mitra_hero_image'])) {
     <div class="clear clearfix"></div>
   </div>
 </section>
+
+<style>
+    section.mitra-1 .sub-section2 h3{
+        max-width: 720px;
+        margin: 0 auto 35px;
+    }
+    section.mitra-1.outer-content-page.back-cream .box-content {
+        max-width: 260px;
+        margin: 0 auto;
+    }
+    section.mitra-1.outer-content-page.back-cream .box-content p{
+        margin-top: 20px;
+        text-align: center;
+        font-size: 14px;
+        min-height: 140px;
+    }
+    section.mitra-1 .small-content {
+        margin-bottom: 50px;
+    }
+    section.mitra-1.outer-content-page.back-cream .box-content p{
+      font-weight: 700;
+    }
+
+</style>

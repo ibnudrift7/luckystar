@@ -1,0 +1,242 @@
+
+body{
+	/*background-color: #fff;*/
+}
+
+section.prodhw-dt,
+section.prodhw-sec-1,
+section.home-sec-1,
+section.home-sec-2{
+	background-color: #fff;
+}
+section.prodhw-dt{
+	margin-top: 5rem;
+	padding-top: 4rem;
+}
+
+section.prodhw-sec-1 .box-content .image{
+	min-height: 210px;
+}
+
+section.home-sec-3.footer2{
+	margin-top: 0;
+}
+.back-white{
+	background-color: #fff;
+}
+.sub-content-vision_mission .lines-orange{
+	height: 341px;
+	/*width: 26px;*/
+	background: url('../images/separators_visimisi.png') top left no-repeat;
+}
+section.cover-insides{
+	max-height: 475px;
+	height: auto;
+}
+.fcs-wrapper.outers_fcs_wrapper #myCarousel_home .carousel-inner .carousel-item{
+	background-position: center;
+	background-size: cover;
+}
+
+section.cover-insides2 .prelative.container h3{
+	letter-spacing: 1px;
+    opacity: 1;
+    font-size: 25px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700;
+}
+section.cover-insides2 .prelative.container p{
+	padding-top: 0.4rem;
+	letter-spacing: 0px;
+    opacity: 1;
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+
+@media (max-width: 1280px){
+	
+	.searchs_boxprd form .form-group input {
+	    max-width: 155px;
+	}
+
+}
+
+
+@media (max-width: 767px) {
+	
+	section.prodhw-sec-1 .box-content .image {
+	    min-height: 175px;
+	}
+
+	header.header{}
+	header.header .bg-dark{
+		background-color: #2b275c !important;
+	}
+	header.header .navbar-dark .navbar-brand{
+		max-width: 175px;
+	}
+	header.header .navbar-dark .navbar-toggler{
+		padding-right: 0; padding-left: 0;
+		border: 0px;
+	}
+	header.header .navbar-dark .navbar-nav .nav-link{
+		font-size: 13px;
+		color: #fff;
+	}
+
+	.fcs-wrapper.outers_fcs_wrapper #myCarousel_home .carousel-caption{
+		position: relative;
+	}
+	.fcs-wrapper.outers_fcs_wrapper #myCarousel_home .carousel-caption .bxsl_tx_fcs .content h5{
+		font-size: 20px;
+	}
+	.fcs-wrapper.outers_fcs_wrapper #myCarousel_home .carousel-caption .bxsl_tx_fcs .content p{
+		font-size: 15px;
+		padding-top: 0.6rem;
+	}
+	.fcs-wrapper.outers_fcs_wrapper #myCarousel_home .carousel-inner{
+		height: auto;
+	}
+	.outers_fcs_wrapper.fcs-wrapper #myCarousel_home{
+		position: relative;
+		top: inherit;
+		left: inherit;
+		height: auto;
+	}
+	section.home-sec-1{
+		padding-top: 50px;
+	}
+	section.home-sec-1 .title-top p{
+		font-size: 22px;
+		text-align: center;
+	}
+	section.home-sec-3{
+		padding-bottom: 60px;
+	}
+
+	html, body{
+		height: auto;
+	}
+	section.cover-insides{
+		min-height: 260px;
+		height: 250px;
+	}
+	section.cover-insides .begrond{
+		height: 90px;
+	}
+	section.cover-insides .begrond .prelative.container h1.teks-cover{
+		font-size: 22px;
+	}
+	.sub-section2 .posabs_contnet {
+	    position: relative;
+	    width: auto;
+	    top: inherit;
+	    left: inherit;
+	    margin-top: 2rem;
+	}
+	section.about-1 .sub-section2 .back-blue .inner_section {
+	    padding: 3.5rem 1rem;
+	}
+	.pos-absolu-featureds_image img{
+		width: 100%;
+	}
+	section.about-1 .c_commitment .subtitle{
+		font-size: 22px;
+	}
+	section.about-1 .c_commitment .subtitle br{
+		display: none;
+	}
+
+	.row.sub-about3k-content{
+
+	}
+	.row.sub-about3k-content .col-md-15{
+		padding-bottom: 2.5rem !important;
+	}
+	section.about-2.outer-content-page.backabout-3k .py-5, 
+	section.about-2.outer-content-page.backabout-3k .py-4, 
+	section.about-2.outer-content-page.backabout-3k .py-3{
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+	}
+	section.breadcrumb-det .title p{
+		font-size: 25px;
+	}
+	section.breadcrumb-det nav ol li,
+	section.breadcrumb-det nav ol li a,
+	section.breadcrumb-det nav ol li.active{
+		font-size: 13px;
+	}
+	section.breadcrumb-det nav{
+		padding-bottom: 25px;
+	}
+	section.breadcrumb-det nav ol{
+		margin-right: 0;
+		margin-bottom: 1rem;
+	}
+	section.breadcrumb-det nav .back a p,
+	section.breadcrumb-det nav .back a{
+		font-size: 12px;
+	}
+	section.breadcrumb-det nav .back{
+		float: none;
+		top: inherit;
+	}
+
+	section.footer{
+		padding-bottom: 2.5rem;
+	}
+
+	section.home-sec-5 .prelative.container button.form-control{
+		float: none;
+	}
+	section.home-sec-4 .box-content .judul a{
+		line-height: 1.5;
+		display: block;
+	}
+	.fcs-wrapper.outers_fcs_wrapper #myCarousel_home .carousel-caption .bxsl_tx_fcs .content p{
+		font-size: 15px;
+	}
+
+	.boxs_fill_information_order h3,
+	section.about-1 .sub-section2 .back-blue .inner_section h3{
+		font-size: 1.6rem;
+	}
+	section.prodhw-sec-1 .atas-sendiri .tampilkan,
+	section.prodhw-sec-1 .atas-sendiri .urutkan p{
+		font-size: 13px;
+	}
+	section.prodhw-sec-1 .box-content .image{
+		max-height: 120px;
+		background-color: #fff;
+		overflow: hidden;
+	}
+	section.prodhw-dt .title-top p{
+		font-size: 20px;
+	}
+
+	.outer-cont-carts .left-conts-tabl-cart{}
+	.outer-cont-carts .left-conts-tabl-cart table.shopcart{}
+	.outer-cont-carts .left-conts-tabl-cart table.shopcart td .nm-descr{
+		margin-left: 0;
+	}
+	.outer-cont-carts .left-conts-tabl-cart table.shopcart tbody tr td span.name{
+		display: block;
+		line-height: 1.3;
+		padding-top: 0.5rem;
+		font-size: 14px;
+	}
+	.boxs_fill_information_order{}
+	.boxs_fill_information_order .basic-information{
+		margin: 0 -15px;
+	}
+	.outer-cont-carts > .height-30{
+		height: 0;
+	}
+
+
+}

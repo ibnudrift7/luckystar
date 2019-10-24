@@ -228,7 +228,7 @@ $this->pageHeader=array(
 				<div class="row-fluid">
 					<?php for ($i=1; $i <= 4; $i++) { ?>
 					<div class="span3">
-						<?php $type = 'about3_smalltitle' ?>
+						<?php $type = 'about3_smalltitle_'. $i ?>
 						<?php Common::createSetting($type, 'Title', 'text', 'y') ?>
 						<?php foreach (Language::model()->getLanguage() as $key => $value): ?>
 							<div class="pj-multilang-wrap myLanguage control-group" style="display: <?php if ($value->code==$this->setting['lang_deff']): ?>block<?php else: ?>none<?php endif ?>;" data-id="<?php echo $value->id ?>">
@@ -240,7 +240,7 @@ $this->pageHeader=array(
 							</div>
 						<?php endforeach ?>
 
-						<?php $type = 'about3_subtitle' ?>
+						<?php $type = 'about3_subtitle_'. $i ?>
 						<?php Common::createSetting($type, 'Subtitle', 'text', 'y') ?>
 						<?php foreach (Language::model()->getLanguage() as $key => $value): ?>
 							<div class="pj-multilang-wrap myLanguage control-group" style="display: <?php if ($value->code==$this->setting['lang_deff']): ?>block<?php else: ?>none<?php endif ?>;" data-id="<?php echo $value->id ?>">
@@ -251,7 +251,7 @@ $this->pageHeader=array(
 							    <span class="help-inline _em_" style="display: none;">Please correct the error</span>
 							</div>
 						<?php endforeach ?>
-						<?php $type = 'about3_contents' ?>
+						<?php $type = 'about3_contents_'. $i ?>
 						<?php Common::createSetting($type, 'Content', 'text', 'y') ?>
 						<?php foreach (Language::model()->getLanguage() as $key => $value): ?>
 							<div class="pj-multilang-wrap myLanguage control-group" style="display: <?php if ($value->code==$this->setting['lang_deff']): ?>block<?php else: ?>none<?php endif ?>;" data-id="<?php echo $value->id ?>">

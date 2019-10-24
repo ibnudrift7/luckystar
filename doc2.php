@@ -46,5 +46,3 @@ statis no language
 <?php echo Yii::app()->baseUrl.ImageHelper::thumb(1920,566, '/images/static/'. $this->setting['about_hero_image'] , array('method' => 'adaptiveResize', 'quality' => '90')) ?>
 
 <?php echo $this->setting['asdfasdf'] ?>
-
-<?php echo Yii::app()->baseUrl.'/images/static/'.$this->setting['asdfasdf']; ?>

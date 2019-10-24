@@ -20,14 +20,14 @@ $slide = Slide::model()->with(array('description'))->findAll($criteria);
             <div class="carousel-inner">
                 <?php foreach ($slide as $key => $value): ?>
                 <div class="carousel-item <?php if($key == 0): ?>active<?php endif ?> home-slider-new">
-                    <img class="w-100 d-none d-sm-block" src="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(1920,826, '/images/slide/'. $value->image , array('method' => 'adaptiveResize', 'quality' => '90')) ?>" alt="First slide">
+                    <img class="w-100 d-none d-sm-block" src="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(1920,982, '/images/slide/'. $value->image , array('method' => 'adaptiveResize', 'quality' => '90')) ?>" alt="First slide">
                     <img class="w-100 d-block d-sm-none" src="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(774, 867, '/images/slide/'. $value->image2 , array('method' => 'adaptiveResize', 'quality' => '90')) ?>" alt="">
                     <?php if ($value->description->title): ?>
                     <div class="carousel-caption caption-slider-home mx-auto">
                         <div class="prelatife container mx-auto">
                             <div class="bxsl_tx_fcs">
                                 <div class="row no-gutters">
-                                    <div class="col-md-60 mx-auto py-4 text-center">
+                                    <div class="col-md-60 mx-auto py-4 my-3 text-center">
                                         <div class="content">
                                             <h5><?php echo $value->description->title ?></h5>
                                             <p><?php echo nl2br($value->description->subtitle); ?></p>
@@ -78,7 +78,7 @@ $slide = Slide::model()->with(array('description'))->findAll($criteria);
             });
 
             $('#myCarousel_home.carousel').carousel({
-              interval: 4000,
+              interval: 5500,
               pause: "false"
             });
         }
@@ -87,3 +87,9 @@ $slide = Slide::model()->with(array('description'))->findAll($criteria);
 </script>
 <?php echo $this->renderPartial('//layouts/_footer', array()); ?>
 <?php $this->endContent(); ?>
+
+<style>
+	.outers_fcs_wrapper.fcs-wrapper ol.carousel-indicators li:hover{
+		cursor: pointer;
+	}
+</style>

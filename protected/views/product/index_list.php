@@ -1,4 +1,4 @@
-<section class="cover-prod">
+<!-- <section class="cover-prod">
     <div class="prelative container3">
         <div class="row">
             <div class="col-md-60">
@@ -12,6 +12,22 @@
                 </div>
             </div>
         </div>
+    </div>
+</section> -->
+<section class="cover-insides2">
+    <div class="prelative container">
+      <div class="teks">
+          <div class="row">
+              <div class="col-md-60">
+                  <?php if (isset($_GET['category'])): ?>
+                  <h3><?php echo ucwords( strtolower($strCategory->description->name) ); ?> Collection</h3>
+                  <?php else: ?>
+                  <h3>Products Collection</h3>
+                  <?php endif ?>
+                  <p>By Lucky Star Plastics</p>
+              </div>
+          </div>
+      </div>
     </div>
 </section>
 

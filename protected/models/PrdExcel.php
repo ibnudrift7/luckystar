@@ -48,7 +48,6 @@ class PrdExcel extends CActiveRecord
 			array('status, onsale, trending', 'numerical', 'integerOnly'=>true),
 			array('nama_produk, kategori, file_gambar, harga, label_warna, label_kemasan', 'length', 'max'=>225),
 			// The following rule is used by search().
-			array('kode, label_size', 'safe'),
 			// Please remove those attributes that should not be searched.
 			array('id, nama_produk, kategori, file_gambar, harga, label_warna, label_kemasan, deskripsi, status, onsale, trending', 'safe', 'on'=>'search'),
 		);
@@ -82,8 +81,6 @@ class PrdExcel extends CActiveRecord
 			'status' => 'Status',
 			'onsale' => 'Onsale',
 			'trending' => 'Trending',
-			'kode' => 'Kode',
-			'label_size' => 'label size',
 		);
 	}
 
@@ -99,8 +96,6 @@ class PrdExcel extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id,true);
-		$criteria->compare('kode',$this->kode,true);
-		$criteria->compare('label_size',$this->label_size,true);
 		$criteria->compare('nama_produk',$this->nama_produk,true);
 		$criteria->compare('kategori',$this->kategori,true);
 		$criteria->compare('file_gambar',$this->file_gambar,true);

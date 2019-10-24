@@ -35,8 +35,10 @@ $mod_kategori = PrdCategory::model()->findAll($criteria);
 <section class="home-sec-1">
 	<div class="prelative container">
 		<div class="row">
-			<div class="title-top">
-				<p>Kategori Favorit Produk Plastik Lucky Star</p>
+			<div class="col-md-60">
+				<div class="title-top">
+					<p>Kategori Favorit Produk Plastik Lucky Star</p>
+				</div>
 			</div>
 		</div>
 		<div class="row">

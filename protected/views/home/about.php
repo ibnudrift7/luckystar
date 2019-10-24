@@ -24,8 +24,10 @@ if (isset($this->setting['about_hero_image'])) {
   <div class="prelatife container">
       <div class="py-5"></div>
       <div class="row small-content text-center">
-        <div class="atas">
-          <?php echo $this->setting['about1_top_content'] ?>
+        <div class="col-md-60">
+          <div class="atas">
+            <?php echo $this->setting['about1_top_content'] ?>
+          </div>
         </div>
       </div>
 
@@ -85,10 +87,10 @@ if (isset($this->setting['about_hero_image'])) {
         <?php for ($i=1; $i < 5; $i++) { ?>
         <div class="col-md-15">
           <div class="top pb-4">
-            <h3><?php echo $this->setting['about3_smalltitle'] ?></h3>
-            <small><?php echo $this->setting['about3_subtitle'] ?></small>
+            <h3><?php echo $this->setting['about3_smalltitle_'. $i] ?></h3>
+            <small><?php echo $this->setting['about3_subtitle_'. $i] ?></small>
           </div>
-          <p><?php echo $this->setting['about3_contents'] ?></p>
+          <p><?php echo $this->setting['about3_contents_'. $i] ?></p>
         </div>
         <?php } ?>
 
@@ -102,12 +104,16 @@ if (isset($this->setting['about_hero_image'])) {
           <div class="col-md-40">
             <div class="row my-auto">
               <div class="col-md-30 py-5">
+                <div class="py-5">
                 <h3>Visi</h3>
                 <?php echo $this->setting['about_vision']; ?>
+                </div>
               </div>
               <div class="col-md-30 py-5 lines-orange">
+                <div class="py-5">
                 <h3>Misi</h3>
                 <?php echo $this->setting['about_mission']; ?>
+                </div>
               </div>
             </div>
           </div>

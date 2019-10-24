@@ -45,7 +45,7 @@ $mod_prodisi = [
 ];
 ?>
 
-<section class="breadcrumb-det">
+<section class="breadcrumb-det back-white">
     <div class="prelative container">
         <?php 
         $cat_name = $category->description->name;
@@ -53,7 +53,7 @@ $mod_prodisi = [
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo CHtml::normalizeUrl(array('/product/index', 'category'=> $category->id)); ?>"><?php echo ucwords(strtolower($cat_name)); ?> Collection</a></li>
-                <li class="breadcrumb-item active" aria-current="page"><?php echo $data->description->name; ?></li>
+                <li class="breadcrumb-item active" aria-current="page"><?php echo ucwords(strtolower($data->description->name)); ?></li>
             </ol>
             <div class="back">
                 <a href="#" onclick="window.history.back();">
@@ -128,7 +128,7 @@ $mod_prodisi = [
                         </div>
                     </div>
                     <div class="col-md-43">
-                        <div class="prodisi">
+                        <div class="prodisi quan">
                             <p>
                               <input type="number" name="qty" value="1" class="form-control">
                               &nbsp;&nbsp;
@@ -174,7 +174,7 @@ $mod_fav = [
 ];
 ?>
 
-<section class="prodhw-dt">
+<section class="prodhw-dt mt-0">
     <div class="prelative container">
         <div class="row">
       <div class="title-top">
