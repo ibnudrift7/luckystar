@@ -304,10 +304,9 @@ section.cover-insides2 .prelative.container p{
 		height: 0;
 	}
 	.outers_fcs_wrapper.fcs-wrapper ol.carousel-indicators{
-		width: 100%;
 		position: absolute;
 		bottom: 0px;
-		width: 100%;
+		width: 60%;
 		z-index: 25;
 	}
 	section.home-sec-2 .title p{
