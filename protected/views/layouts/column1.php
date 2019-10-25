@@ -16,7 +16,7 @@ $slide = Slide::model()->with(array('description'))->findAll($criteria);
 ?>                
 
 <div class="fcs-wrapper outers_fcs_wrapper prelatife wrapper-slide">
-    <div id="myCarousel_home" class="carousel carousel-fade" data-ride="carousel" data-interval="1000000000">
+    <div id="myCarousel_home" class="carousel carousel-fade" data-ride="carousel" data-interval="5500">
             <div class="carousel-inner">
                 <?php foreach ($slide as $key => $value): ?>
                 <div class="carousel-item <?php if($key == 0): ?>active<?php endif ?> home-slider-new">
@@ -25,14 +25,11 @@ $slide = Slide::model()->with(array('description'))->findAll($criteria);
                     <?php if ($value->description->title): ?>
                     <div class="carousel-caption caption-slider-home mx-auto">
                         <div class="prelatife container mx-auto">
-                            <div class="bxsl_tx_fcs">
-                                <div class="row no-gutters">
-                                    <div class="col-md-60 mx-auto py-4 my-3 text-center">
-                                        <div class="content">
-                                            <h5><?php echo $value->description->title ?></h5>
-                                            <p><?php echo nl2br($value->description->subtitle); ?></p>
-                                        </div>
-                                    </div>
+                            <div class="bxsl_tx_fcs text-center">
+                                <div class="content">
+                                    <h5><?php echo $value->description->title ?></h5>
+                                    <p><?php echo nl2br($value->description->subtitle); ?></p>
+                                    <div class="clear"></div>
                                 </div>
                             </div>
                         </div>
@@ -63,6 +60,33 @@ $slide = Slide::model()->with(array('description'))->findAll($criteria);
             $item.addClass('full-screen');
 
             $('#myCarousel_home.carousel img.d-none.d-sm-block').each(function() {
+              var $src = $(this).attr('src');
+              var $color = $(this).attr('data-color');
+              $(this).parent().css({
+                'background-image' : 'url(' + $src + ')',
+                'background-color' : $color
+              });
+              $(this).remove();
+            });
+
+            $(window).on('resize', function (){
+              $wHeight = $(window).height();
+              $item.height($wHeight);
+            });
+
+            $('#myCarousel_home.carousel').carousel({
+              interval: 5500,
+              pause: "false"
+            });
+        }
+        if ($(window).width() <= 768) {
+            var $item = $('#myCarousel_home.carousel .carousel-item'); 
+            var $wHeight = $(window).height();
+            $item.eq(0).addClass('active');
+            $item.height($wHeight); 
+            $item.addClass('full-screen');
+
+            $('#myCarousel_home.carousel img.d-block.d-sm-none').each(function() {
               var $src = $(this).attr('src');
               var $color = $(this).attr('data-color');
               $(this).parent().css({

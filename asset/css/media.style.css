@@ -36,6 +36,7 @@ section.cover-insides{
 .fcs-wrapper.outers_fcs_wrapper #myCarousel_home .carousel-inner .carousel-item{
 	background-position: center;
 	background-size: cover;
+	/*height: 100vh;*/
 }
 
 section.cover-insides2 .prelative.container h3{
@@ -64,6 +65,7 @@ section.cover-insides2 .prelative.container p{
 	}
 
 }
+
 
 
 @media (max-width: 767px) {
@@ -112,32 +114,53 @@ section.cover-insides2 .prelative.container p{
 		margin-bottom: 0 !important;
 	}
 	.fcs-wrapper.outers_fcs_wrapper #myCarousel_home .carousel-caption .bxsl_tx_fcs{
-		padding: 1.5rem 0 2.5rem;
+		padding: 1.5rem 0 3.5rem;
+		/*padding: 0rem 0;*/
+	}
+	.fcs-wrapper.outers_fcs_wrapper #myCarousel_home .carousel-caption .bxsl_tx_fcs .content{
+		padding: 0;
+	}
+	.fcs-wrapper.outers_fcs_wrapper #myCarousel_home .carousel-caption .bxsl_tx_fcs .content h5{
+		padding-bottom: 0.1rem;
 	}
 	.fcs-wrapper.outers_fcs_wrapper #myCarousel_home .carousel-caption{
 		opacity: 1;
-		background-color: #e1813f;
+		background: rgba(226, 110, 34, 0.8);
+		background-color: rgba(226, 110, 34, 0.8);
 		position: absolute;
+		z-index: 15;
 	}
 	.fcs-wrapper.outers_fcs_wrapper #myCarousel_home .carousel-caption .container{
-		background-color: #e1813f;
+		/*background-color: rgba(226, 110, 34, 0.3);*/
 	}
 	.fcs-wrapper.outers_fcs_wrapper #myCarousel_home .carousel-caption .bxsl_tx_fcs .content h5{
 		font-size: 20px;
+		display: block;
+		margin: 0;
 	}
 	.fcs-wrapper.outers_fcs_wrapper #myCarousel_home .carousel-caption .bxsl_tx_fcs .content p{
 		font-size: 13.5px;
 		padding-top: 0.6rem;
+		display: block;
+		margin: 0;
 	}
 	.fcs-wrapper.outers_fcs_wrapper #myCarousel_home .carousel-inner{
 		height: 100%;
+		/*height: 100vh;*/
 	}
 	.outers_fcs_wrapper.fcs-wrapper #myCarousel_home{
 		position: relative;
 		top: inherit;
 		left: inherit;
 		height: 100%;
+		/*height: 100vh;*/
 	}
+
+	.fcs-wrapper.outers_fcs_wrapper #myCarousel_home .carousel-inner .carousel-item{
+		height: 100%;
+		/*height: 100vh;*/
+	}
+
 	section.home-sec-1{
 		padding-top: 50px;
 	}
@@ -154,7 +177,16 @@ section.cover-insides2 .prelative.container p{
 	}
 	html, body{
 		height: 100%;
+		/*height: 100vh;*/
 	}
+	
+	.fcs-wrapper.outers_fcs_wrapper #myCarousel_home .carousel-inner{
+		/*overflow: hidden;*/
+	}
+	header.header{
+		z-index: 75;
+	}
+
 	section.cover-insides{
 		min-height: 260px;
 		height: 250px;
@@ -276,9 +308,21 @@ section.cover-insides2 .prelative.container p{
 		position: absolute;
 		bottom: 0px;
 		width: 100%;
+		z-index: 25;
 	}
 	section.home-sec-2 .title p{
 		font-size: 20px;
+	}
+
+	.outers_fcs_wrapper.fcs-wrapper ol.carousel-indicators{
+		display: block;
+		text-align: center;
+		padding: 0.35rem 0;
+	}
+	.outers_fcs_wrapper.fcs-wrapper ol.carousel-indicators li{
+		display: inline-block;
+		margin: 0 5px;
+		flex: none;
 	}
 
 }
