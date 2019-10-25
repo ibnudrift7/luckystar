@@ -68,6 +68,13 @@ section.cover-insides2 .prelative.container p{
 
 @media (max-width: 767px) {
 	
+	.container{
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		max-width: inherit;
+		padding: 0 15px;
+	}
+
 	section.prodhw-sec-1 .box-content .image {
 	    min-height: 175px;
 	}
@@ -88,24 +95,48 @@ section.cover-insides2 .prelative.container p{
 		color: #fff;
 	}
 
+	.fcs-wrapper.outers_fcs_wrapper #myCarousel_home .carousel-caption .bxsl_tx_fcs .content p{
+		line-height: 1.4;
+		margin: 0px;
+	}
+	
+	.fcs-wrapper.outers_fcs_wrapper #myCarousel_home .carousel-caption .bxsl_tx_fcs .content{
+		padding-bottom: 0;
+	}
+	.fcs-wrapper.outers_fcs_wrapper #myCarousel_home .carousel-caption .bxsl_tx_fcs .py-4{
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+	}
+	.fcs-wrapper.outers_fcs_wrapper #myCarousel_home .carousel-caption .bxsl_tx_fcs .my-3{
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+	}
+	.fcs-wrapper.outers_fcs_wrapper #myCarousel_home .carousel-caption .bxsl_tx_fcs{
+		padding: 1.5rem 0 2.5rem;
+	}
 	.fcs-wrapper.outers_fcs_wrapper #myCarousel_home .carousel-caption{
-		position: relative;
+		opacity: 1;
+		background-color: #e1813f;
+		position: absolute;
+	}
+	.fcs-wrapper.outers_fcs_wrapper #myCarousel_home .carousel-caption .container{
+		background-color: #e1813f;
 	}
 	.fcs-wrapper.outers_fcs_wrapper #myCarousel_home .carousel-caption .bxsl_tx_fcs .content h5{
 		font-size: 20px;
 	}
 	.fcs-wrapper.outers_fcs_wrapper #myCarousel_home .carousel-caption .bxsl_tx_fcs .content p{
-		font-size: 15px;
+		font-size: 13.5px;
 		padding-top: 0.6rem;
 	}
 	.fcs-wrapper.outers_fcs_wrapper #myCarousel_home .carousel-inner{
-		height: auto;
+		height: 100%;
 	}
 	.outers_fcs_wrapper.fcs-wrapper #myCarousel_home{
 		position: relative;
 		top: inherit;
 		left: inherit;
-		height: auto;
+		height: 100%;
 	}
 	section.home-sec-1{
 		padding-top: 50px;
@@ -117,9 +148,12 @@ section.cover-insides2 .prelative.container p{
 	section.home-sec-3{
 		padding-bottom: 60px;
 	}
-
+	
+	.header-affixs.affix-top{
+		display: none;
+	}
 	html, body{
-		height: auto;
+		height: 100%;
 	}
 	section.cover-insides{
 		min-height: 260px;
@@ -199,7 +233,7 @@ section.cover-insides2 .prelative.container p{
 		display: block;
 	}
 	.fcs-wrapper.outers_fcs_wrapper #myCarousel_home .carousel-caption .bxsl_tx_fcs .content p{
-		font-size: 15px;
+		font-size: 16px;
 	}
 
 	.boxs_fill_information_order h3,
@@ -237,6 +271,14 @@ section.cover-insides2 .prelative.container p{
 	.outer-cont-carts > .height-30{
 		height: 0;
 	}
-
+	.outers_fcs_wrapper.fcs-wrapper ol.carousel-indicators{
+		width: 100%;
+		position: absolute;
+		bottom: 0px;
+		width: 100%;
+	}
+	section.home-sec-2 .title p{
+		font-size: 20px;
+	}
 
 }

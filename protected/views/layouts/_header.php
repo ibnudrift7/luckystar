@@ -17,7 +17,7 @@
               </div>
 			  <div class="col-md-42 float-right">
 				  <div class="row text-right">
-					  <div class="col-md-45 pt-2">
+					  <div class="col-md-42 pt-2">
 						  <ul class="menu-atas">
 							  <li><a href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">HOME</a></li>
 							  <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about')); ?>">TENTANG KAMI</a></li>
@@ -26,7 +26,7 @@
 							  <li><a href="<?php echo CHtml::normalizeUrl(array('/home/contact')); ?>">HUBUNGI KAMI</a></li>
 						  </ul>
 					  </div>
-					  <div class="col-md-15">
+					  <div class="col-md-18">
 						  <div class="menu-icon">
 
 							  <div class="sosmed">
@@ -91,7 +91,7 @@
       </div>
     </div>
     <div class="d-block d-sm-block d-md-none">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">
           <img src="<?php echo $this->assetBaseurl ?>logo-foot.png" alt="" class="img-fluid img">
         </a>
