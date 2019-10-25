@@ -105,7 +105,7 @@
             <li class="nav-item"><a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/product/index')); ?>">Produk</a></li>
             <li class="nav-item"><a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/about')); ?>">Profil</a></li>
             <li class="nav-item"><a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/mitra')); ?>">Jadi Mitra Kami</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/blog/d_index')); ?>">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/blog/index')); ?>">Blog</a></li>
             <li class="nav-item"><a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/contact')); ?>">Hubungi Kami</a></li>
           </ul>
         </div>
@@ -132,7 +132,7 @@
               <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/product/index')); ?>">Produk</a></li>
               <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/about')); ?>">Profil</a></li>
               <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/mitra')); ?>">jadi Mitra Kami</a></li>
-              <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/blog/d_index')); ?>">Blog</a></li>
+              <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/blog/index')); ?>">Blog</a></li>
               <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/contact')); ?>">Hubungi</a></li>
             </ul>
           </div>
