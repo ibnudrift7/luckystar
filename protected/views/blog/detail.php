@@ -20,11 +20,14 @@
           <h1 class="title pb-5"><?php echo $dataBlog->description->title ?></h1>
         </div>
         <div class="picture pb-5">
-          <img src="https://placehold.it/907x590" alt="" class="img img-fluid">
+          <img src="<?php echo Yii::app()->baseUrl.'/images/blog/'. $dataBlog->image ?>" alt="" class="img img-fluid">
         </div>
 
         <?php echo $dataBlog->description->content; ?>
         <div class="clearfix"></div>
+        <div class="py-2"></div>
+        <a href="#" onclick="window.history.back();" class="btn btn-link gotoBack"><i class="fa fa-chevron-left"></i> BACK</a>
+        <div class="py-2"></div>
         <!-- <div class="py-4"></div> -->
 
       <div class="row d-none">

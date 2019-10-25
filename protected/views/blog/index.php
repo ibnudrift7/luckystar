@@ -16,7 +16,7 @@
       <div class="row small-content text-center">
         <div class="col-md-8"></div>
         <div class="col-md-44">
-          <ul class="list-inline">
+          <ul class="list-inline filters_top">
             <?php 
             $res_product = array(
               0=>'All',
@@ -25,8 +25,8 @@
               );
             ?>
             <?php foreach ($res_product as $key => $value): ?>
-            <li class="list-inline-item">
-                <a href="<?php echo CHtml::normalizeUrl(array('/blog/index', 'topik'=>$key)); ?>"><?php echo $value ?></a> 
+            <li class="list-inline-item <?php if ($_GET['topik'] == '' && $key == 0): ?>active<?php endif ?> <?php if ($_GET['topik'] == $key): ?>active<?php endif ?>">
+                <a href="<?php echo CHtml::normalizeUrl(array('/blog/index', 'topik'=> ($key != 0)? $key :'' )); ?>"><?php echo $value ?></a> 
             </li>
             <?php endforeach ?>
           </ul>
@@ -73,6 +73,10 @@
               </div>
             </div>
           <?php endforeach ?>
+          <?php else: ?>
+            <div class="text-center">
+            <h3>Sorry is empty Data</h3>
+            </div>
           <?php endif ?>
         </div>
         <div class="py-2"></div>

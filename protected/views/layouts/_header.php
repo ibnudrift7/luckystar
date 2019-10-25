@@ -22,7 +22,7 @@
 							  <li><a href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">HOME</a></li>
 							  <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about')); ?>">TENTANG KAMI</a></li>
 							  <li><a href="<?php echo CHtml::normalizeUrl(array('/home/mitra')); ?>">JADI MITRA KAMI</a></li>
-							  <li><a href="<?php echo CHtml::normalizeUrl(array('/blog/d_index')); ?>">BLOG</a></li>
+							  <li><a href="<?php echo CHtml::normalizeUrl(array('/blog/index')); ?>">BLOG</a></li>
 							  <li><a href="<?php echo CHtml::normalizeUrl(array('/home/contact')); ?>">HUBUNGI KAMI</a></li>
 						  </ul>
 					  </div>

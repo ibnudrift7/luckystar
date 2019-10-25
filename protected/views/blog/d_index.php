@@ -17,14 +17,21 @@
       <div class="row small-content text-center">
         <div class="col-md-8"></div>
         <div class="col-md-44">
+          <?php 
+          $res_product = array(
+              2=>'Article',
+              3=>'Events',
+              );
+          ?>
           <ul class="list-inline">
-            <li class="list-inline-item"><a href="#">ALL</a></li>
-            <li class="list-inline-item"><a href="#">ARTICLE</a></li>
-            <li class="list-inline-item"><a href="#">EVENTS</a></li>
+            <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/blog/index')); ?>">ALL</a></li>
+            <?php foreach ($res_product as $key => $value): ?>
+            <li class="list-inline-item"><a href="<?php echo CHtml::normalizeUrl(array('/blog/index', 'topik'=> $key)); ?>"><?php echo strtoupper($value) ?></a></li>
+            <?php endforeach ?>
           </ul>
         </div>
         <div class="col-md-8 text-right">
-          <nav aria-label="...">
+          <nav aria-label="..." class="d-none">
             <ul class="pagination pagination-sm">
               <li class="page-item disabled">
                 <a class="page-link" href="#" tabindex="-1">1</a>
@@ -40,19 +47,27 @@
 
       <div class="sub-section2 outers_list_blog">
         <div class="row">
-          <?php for ($i=0; $i < 12; $i++) { ?>
-          <div class="col-md-20">
-            <div class="items pb-4 mb-2">
-              <div class="picture"><img src="https://placehold.it/468x304" alt="" class="img img-fluid"></div>
-              <div class="info pt-2">
-                <div class="dates"><p>22 March 2019</p></div>
-                <h6>Financial Stress - Simple Strategies to Overcome It</h6>
-                <a href="<?php echo CHtml::normalizeUrl(array('/blog/d_detail')); ?>" class="mores">Read More</a>
+
+          <?php if ($dataBlog->getTotalItemCount() > 0): ?>
+          <?php foreach ($dataBlog->getData() as $key => $value): ?>
+            <div class="col-md-20">
+              <div class="items pb-4 mb-2">
+                <div class="picture">
+                  <a href="<?php echo CHtml::normalizeUrl(array('/blog/detail', 'id'=> $value->id)); ?>">
+                  <img class="img w-100" src="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(468,304, '/images/blog/'. $value->image, array('method' => 'adaptiveResize', 'quality' => '90')) ?>" alt="">
+                  </a>
+                </div>
+                <div class="info pt-2">
+                  <div class="dates"><p><?php echo date("d M Y", strtotime($value->date_input)); ?></p></div>
+                  <h6><a href="<?php echo CHtml::normalizeUrl(array('/blog/detail', 'id'=> $value->id)); ?>"><?php echo $value->description->title ?></a></h6>
+                  <a href="<?php echo CHtml::normalizeUrl(array('/blog/detail', 'id'=> $value->id)); ?>" class="mores">Read More</a>
+                </div>
+                <div class="clear"></div>
               </div>
             </div>
-          </div>
-          <?php } ?>
-
+          <?php endforeach ?>
+          <?php endif ?>
+          
         </div>
         <div class="clearfix"></div>
       </div>
