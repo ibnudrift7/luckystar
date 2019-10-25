@@ -64,7 +64,7 @@
       <div class="header-bottom">
           <div class="prelative header-cont">
               <div class="row">
-                  <div class="col-md-44">
+                  <div class="col-md-40">
                       <div class="grant py-3">
                           <ul class="bawah-head">
                           <?php foreach($mod_kategori as $key => $value): ?>
@@ -75,7 +75,7 @@
                           </ul>
                       </div>
                   </div>
-                  <div class="col-md-16 text-right">
+                  <div class="col-md-20 text-right">
                       <div class="searchs_boxprd pt-1 float-right">
                           <form class="form-inline" method="get" action="<?php echo CHtml::normalizeUrl(array('/product/index')); ?>">
                             <div class="form-group">
